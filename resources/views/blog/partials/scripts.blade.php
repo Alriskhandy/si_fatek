@@ -1,13 +1,24 @@
-<!-- Vendor JS Files -->
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
-
-<!-- JSDelivr -->
+  <!--   Core JS Files   -->
+  <script src="{{ asset('assets/blog/js/core/popper.min.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('assets/blog/js/core/bootstrap.min.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('assets/blog/js/plugins/perfect-scrollbar.min.js') }}"></script>
+  <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+  <script src="{{ asset('assets/blog/js/plugins/countup.min.js') }}"></script>
+  <script src="{{ asset('assets/blog/js/plugins/prism.min.js') }}"></script>
+  <script src="{{ asset('assets/blog/js/plugins/highlight.min.js') }}"></script>
+  <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+  <script src="{{ asset('assets/blog/js/material-kit.min.js?v=3.0.4') }}" type="text/javascript"></script>
+  <script>
+    if (document.getElementById('typed')) {
+      var typed = new Typed("#typed", {
+        stringsElement: '#typed-strings',
+        typeSpeed: 70,
+        backSpeed: 50,
+        backDelay: 200,
+        startDelay: 500,
+        loop: true
+      });
+    }
+  </script>

@@ -1,56 +1,159 @@
-<header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-between align-items-center">
-        <a href="{{ route('home') }}" class="logo d-flex align-items-center">
-            <img src="{{ asset('assets/img/logo.png') }}" alt="Logo LDII" style="margin-top: -10px;">
-            <h1 class="logo" style="margin-left: 10px; color: #0a6f3e;">{{ __('DPW LDII MALUT') }}</h1>
-        </a>
+<!-- Navbar Dark -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark z-index-4 py-3">
+  <div class="container">
+    <a class="navbar-brand text-white" href="https://demos.creative-tim.com/material-kit/presentation" rel="tooltip"
+      title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+      SiFatek
+    </a>
+    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon mt-2">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">
+            Beranda
+          </a>
+        </li>
 
-        <nav id="navbar" class="navbar order-last order-lg-0">
-            <ul>
-                <li><a class="nav-link scrollto {{ Request::routeIs('home') ? 'active' : '' }}"
-                        href="{{ route('home') }}">Beranda</a></li>
-                <li class="dropdown">
-                    <a href="#">
-                        <span>Tentang Kami</span> <i class="bi bi-chevron-down"></i>
-                    </a>
-                    <ul>
-                        <li><a href="{{ route('sejarah') }}"
-                                class="{{ Request::routeIs('sejarah') ? 'active' : '' }}">Sejarah LDII</a></li>
-                        <li><a href="{{ route('visi-misi') }}"
-                                class="{{ Request::routeIs('visi-misi') ? 'active' : '' }}">Visi & Misi</a></li>
-                        <li><a href="{{ route('tentang') }}"
-                                class="{{ Request::routeIs('tentang') ? 'active' : '' }}">Tentang LDII</a></li>
-                    </ul>
-                </li>
-                <li><a class="nav-link scrollto {{ Request::routeIs('struktur-organisasi') ? 'active' : '' }}"
-                        href="{{ route('struktur-organisasi') }}">Struktur Organisasi</a></li>
-                <li class="dropdown">
-                    <a href="#">
-                        <span>Kategori Artikel</span> <i class="bi bi-chevron-down"></i>
-                    </a>
-                    <ul>
-                        @foreach ($categories as $c)
-                        <li><a href="{{ route('dakwah') }}" class="{{ Request::routeIs('dakwah') ? 'active' : '' }}">{{
-                                $c['name'] }}</a></li>
-                        @endforeach
-                    </ul>
-                </li>
-                <li><a class="nav-link scrollto {{ Request::routeIs('kontak') ? 'active' : '' }}"
-                        href="{{ route('kontak') }}">Kontak</a></li>
-                <li class="dropdown">
-                    <a href="#">
-                        <span>Lain-lain</span> <i class="bi bi-chevron-down"></i>
-                    </a>
-                    <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li><a href="#">Drop Down 2</a></li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Berita</a></li>
+            <li><a class="dropdown-item" href="#">Sejarah Singkat</a></li>
+            <li><a class="dropdown-item" href="#">Visi, Misi dan Sasaran</a></li>
+            <li><a class="dropdown-item" href="#">Manajemen</a></li>
+            <li><a class="dropdown-item" href="#">Struktur Organisasi</a></li>
+            <li><a class="dropdown-item" href="#">Master Plan</a></li>
+            <li><a class="dropdown-item" href="#">Peta Kampus</a></li>
+            <li><a class="dropdown-item" href="#">Mediatek</a></li>
+          </ul>
+        </li>
 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Akademik
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Departemen</a></li>
+            <li><a class="dropdown-item" href="#">Program Magister</a></li>
+            <li><a class="dropdown-item" href="#">Program Doktor</a></li>
+            <li><a class="dropdown-item" href="#">Program Profesi</a></li>
+            <li><a class="dropdown-item" href="#">Akreditasi</a></li>
+            <li><a class="dropdown-item" href="#">Kalender Akademik</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Sumber Daya
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Guru Besar</a></li>
+            <li><a class="dropdown-item" href="#">Tenaga Kependidikan</a></li>
+            <li><a class="dropdown-item" href="#">Sarana dan Prasarana</a></li>
+            <li><a class="dropdown-item" href="#">Perpustakaan</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Kemahasiswaan
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">UPT Asrama</a></li>
+            <li><a class="dropdown-item" href="#">Pengembangan Karakter Mahasiswa</a></li>
+            <li><a class="dropdown-item" href="#">Peningkatan Prestasi Mahasiswa</a></li>
+            <li><a class="dropdown-item" href="#">Mahsiswa Inbound dan Outbound</a></li>
+            <li><a class="dropdown-item" href="#">Alumni</a></li>
+            <li><a class="dropdown-item" href="#">Aturan Kemahasiswaan</a></li>
+            <li><a class="dropdown-item" href="#">Pengumuman</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Riset dan Inovasi
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Daftar Penelitian LBE</a></li>
+            <li><a class="dropdown-item" href="#">Hasil Inovasi</a></li>
+            <li><a class="dropdown-item" href="#">Hak Kekayaan Intelektual</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Kemitraan
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Kerjasama Dalam Negeri</a></li>
+            <li><a class="dropdown-item" href="#">Kerjasama Luar Negeri</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            GPM-PR
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Profile GPM-PR</a></li>
+            <li><a class="dropdown-item" href="#">Dokumen Mutu</a></li>
+            <li><a class="dropdown-item" href="#">Audit Mutu Akademik Internal</a></li>
+            <li><a class="dropdown-item" href="#">Akreditasi</a></li>
+            <li><a class="dropdown-item" href="#">LAM TEKNIK</a></li>
+            <li><a class="dropdown-item" href="#">Laporan Kepuasan Pengguna</a></li>
+            <li><a class="dropdown-item" href="#">Survei Kepuasan Layanan Mahsiswa</a></li>
+            <li><a class="dropdown-item" href="#">Galeri</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            COT
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">COT Website</a></li>
+            <li><a class="dropdown-item" href="#">Jurnal COT</a></li>
+            <li><a class="dropdown-item" href="#">COT Newslatter</a></li>
+            <li><a class="dropdown-item" href="#">U-I-G Collaboration</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="https://twitter.com/CreativeTim">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="https://www.facebook.com/CreativeTim">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="https://www.instagram.com/CreativeTimOfficial">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
     </div>
-</header>
+  </div>
+</nav>
+<!-- End Navbar -->
