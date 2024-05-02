@@ -30,7 +30,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/charts/chartjs.html" class="nav-link">
+                            <a href="{{ route('berita') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Berita</p>
                             </a>
@@ -155,43 +155,6 @@
                             <a href="pages/forms/advanced.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Perpustakaan</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <!-- K3 -->
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-user-shield"></i>
-                        <p>
-                            K3
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/tables/simple.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Profil K3</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Struktur Organisasi K3</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tentang K3 FT-Unkhair</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>File Pendukung</p>
                             </a>
                         </li>
                     </ul>
@@ -370,12 +333,14 @@
                 </li>
 
                 <!-- KELOLA PENGGUNA -->
+                @can('IsAdmin')
                 <li class="nav-item">
                     <a href="{{ route('kelola-pengguna') }}" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>Kelola Pengguna</p>
                     </a>
                 </li>
+                @endcan
 
                 <!-- EDIT PROFIL -->
                 <li class="nav-item">
@@ -387,10 +352,14 @@
 
                 <!-- LOGOUT -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a class="nav-link" href="{{ route('logout') }}"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <i class="nav-icon fas fa-power-off"></i>
                         <p>Logout</p>
                     </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </li>
             </ul>
         </nav>
