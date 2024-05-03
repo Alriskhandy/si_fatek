@@ -21,9 +21,7 @@
     </x-slot>
 
     <div class="container pb-2">
-        {{-- <a href="{{ route('tambah-pengguna') }}">
-            <button type="button" class="btn btn-outline-success">Tambah Admin</button>
-        </a> --}}
+
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             Tambah Admin
