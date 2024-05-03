@@ -18,15 +18,15 @@
                                     <div class="card shadow-lg">
                                         <div
                                             class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-                                            <div class="bg-gradient-info shadow-dark border-radius-lg p-4">
-                                                <h3 class="text-white mb-0">Sejarah Singkat</h3>
+                                            <div class="bg-gradient-dark shadow-dark border-radius-lg p-4">
+                                                <h3 class="text-white mb-0">Judul Berita</h3>
                                             </div>
                                         </div>
                                         <div class="card-body p-5 pt-0">
                                             <div class="card-image position-relative text-center border-radius-lg my-5">
                                                 <div class="blur-shadow-image">
                                                     <img class="img border-radius-lg col-lg-9 col-md-7"
-                                                        src="{{ asset('assets/blog/img/bg.jpg') }}" alt="architecture"
+                                                        src="{{ asset('assets/blog/img/bg9.jpg') }}" alt="architecture"
                                                         loading="lazy">
                                                 </div>
                                             </div>
@@ -65,6 +65,13 @@
                                                 lacus, vel ullamcorper libero gravida vel. Sed tincidunt metus eu arcu
                                                 feugiat, in gravida dolor lacinia.
                                             </p>
+                                            <hr class="horizontal dark my-5">
+                                            <div class="row">
+                                                <p class="col-lg-2 text-dark text-bold opacity-8">Last modified:
+                                                    Sept 01
+                                                    2021</p>
+                                                <p class="col-lg-10 fas fa-eye text-dark opacity-8 mt-1"> 80 View</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

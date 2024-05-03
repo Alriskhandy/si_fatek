@@ -5,12 +5,11 @@
       <nav
         class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
         <div class="container">
-          <a class="navbar-brand text-dark" href="/" rel="tooltip" title="Designed and Coded by Creative Tim"
-            data-placement="bottom" target="_blank">
-            SiFatek
+          <a class="navbar-brand text-dark" href="/" rel="tooltip" data-placement="bottom" target="_blank">
+            _SiFatek
           </a>
           <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
-            data-bs-target="/understructurenavigation" aria-controls="navigation" aria-expanded="false"
+            data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon mt-2">
               <span class="navbar-toggler-bar bar1"></span>
@@ -22,7 +21,7 @@
 
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link text-dark" href="/">
+                <a class="nav-link text-dark {{ Request::is('/') ? 'active' : '' }}" href="/">
                   Beranda
                 </a>
               </li>
@@ -33,13 +32,14 @@
                   Profile
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/sambutan-dekan">Sambutan Dekan</a></li>
                   <li><a class="dropdown-item" href="/berita">Berita</a></li>
                   <li><a class="dropdown-item" href="/sejarah-singkat">Sejarah Singkat</a></li>
                   <li><a class="dropdown-item" href="/visi-misi-dan-sasaran">Visi, Misi dan Sasaran</a></li>
                   <li><a class="dropdown-item" href="/manajemen">Manajemen</a></li>
                   <li><a class="dropdown-item" href="/struktur-organisasi">Struktur Organisasi</a></li>
-                  <li><a class="dropdown-item" href="/master-plan">Master Plan</a></li>
                   <li><a class="dropdown-item" href="/peta-fakultas">Peta Fakultas</a></li>
+                  <li><a class="dropdown-item" href="/master-plan">Master Plan</a></li>
                   <li><a class="dropdown-item" href="/mediatek">Mediatek</a></li>
                 </ul>
               </li>
@@ -50,12 +50,12 @@
                   Akademik
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/understructure">Departemen</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Program Magister</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Program Doktor</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Program Profesi</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Akreditasi</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Kalender Akademik</a></li>
+                  <li><a class="dropdown-item" href="/departemen">Departemen</a></li>
+                  <li><a class="dropdown-item" href="/program-magister">Program Magister</a></li>
+                  <li><a class="dropdown-item" href="/program-doktor">Program Doktor</a></li>
+                  <li><a class="dropdown-item" href="/program-profesi">Program Profesi</a></li>
+                  <li><a class="dropdown-item" href="/akreditasi">Akreditasi</a></li>
+                  <li><a class="dropdown-item" href="/kalender-akademik">Kalender Akademik</a></li>
                 </ul>
               </li>
 
@@ -65,10 +65,10 @@
                   Sumber Daya
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/understructure">Guru Besar</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Tenaga Kependidikan</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Sarana dan Prasarana</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Perpustakaan</a></li>
+                  <li><a class="dropdown-item" href="/guru-besar">Guru Besar</a></li>
+                  <li><a class="dropdown-item" href="/tenaga-kependidikan">Tenaga Kependidikan</a></li>
+                  <li><a class="dropdown-item" href="/sarana-prasarana">Sarana dan Prasarana</a></li>
+                  <li><a class="dropdown-item" href="/perpustakaan">Perpustakaan</a></li>
                 </ul>
               </li>
 
@@ -78,13 +78,14 @@
                   Kemahasiswaan
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/understructure">UPT Asrama</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Pengembangan Karakter Mahasiswa</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Peningkatan Prestasi Mahasiswa</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Mahsiswa Inbound dan Outbound</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Alumni</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Aturan Kemahasiswaan</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Pengumuman</a></li>
+                  <li><a class="dropdown-item" href="/pengembangan-karakter-mahasiswa">Pengembangan Karakter
+                      Mahasiswa</a></li>
+                  <li><a class="dropdown-item" href="/peningkatan-prestasi-mahasiswa">Peningkatan Prestasi Mahasiswa</a>
+                  </li>
+                  <li><a class="dropdown-item" href="/mahasiswa-inbound-outbound">Mahsiswa Inbound dan Outbound</a></li>
+                  <li><a class="dropdown-item" href="/alumni">Alumni</a></li>
+                  <li><a class="dropdown-item" href="/aturan-kemahasiswaan">Aturan Kemahasiswaan</a></li>
+                  <li><a class="dropdown-item" href="/pengumuman">Pengumuman</a></li>
                 </ul>
               </li>
 
@@ -94,9 +95,9 @@
                   Riset dan Inovasi
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/understructure">Daftar Penelitian LBE</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Hasil Inovasi</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Hak Kekayaan Intelektual</a></li>
+                  <li><a class="dropdown-item" href="/daftar-penelitian-lbe">Daftar Penelitian LBE</a></li>
+                  <li><a class="dropdown-item" href="/hasil-inovasi">Hasil Inovasi</a></li>
+                  <li><a class="dropdown-item" href="/hak-kekayaan-intelektual">Hak Kekayaan Intelektual</a></li>
                 </ul>
               </li>
 
@@ -106,8 +107,8 @@
                   Kemitraan
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/understructure">Kerjasama Dalam Negeri</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Kerjasama Luar Negeri</a></li>
+                  <li><a class="dropdown-item" href="/kerjasama-dalam-negeri">Kerjasama Dalam Negeri</a></li>
+                  <li><a class="dropdown-item" href="/kerjasama-luar-negeri">Kerjasama Luar Negeri</a></li>
                 </ul>
               </li>
 
@@ -142,6 +143,7 @@
               </li>
             </ul>
 
+            <!-- nav Social Media -->
             <ul class="nav navbar-nav">
               <li class="nav-item">
                 <a class="nav-link text-dark" href="https://twitter.com/CreativeTim">
@@ -156,6 +158,11 @@
               <li class="nav-item">
                 <a class="nav-link text-dark" href="https://www.instagram.com/CreativeTimOfficial">
                   <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w">
+                  <i class="fab fa-youtube"></i>
                 </a>
               </li>
             </ul>

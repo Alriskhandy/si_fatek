@@ -10,196 +10,298 @@
 
     <div class="row">
 
-      <!-- Kolom Blog -->
-      <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
-        <!-- Section with four info areas left & one card right with image and waves -->
-        <section class="py-7">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-lg-6">
-                <div class="row justify-content-start">
-                  <div class="col-md-6">
-                    <div class="info">
-                      <i class="material-icons text-3xl text-gradient text-info mb-3">public</i>
-                      <h5>Fully integrated</h5>
-                      <p>We get insulted by others, lose trust for those We get back freezes</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="info">
-                      <i class="material-icons text-3xl text-gradient text-info mb-3">payments</i>
-                      <h5>Payments functionality</h5>
-                      <p>We get insulted by others, lose trust for those We get back freezes</p>
-                    </div>
-                  </div>
+      <section class="py-6 position-relative mt-5">
+        <div class="col-lg-6">
+          <h2 class="mb-7 px-5 text-info">Pendidikan _________</h2>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class=" bg-gradient-dark">
+              <div class="row py-5">
+                <div class="col-xl-4 col-md-6 px-5 position-relative">
+                  <img class="img max-width-300 w-100 position-relative z-index-2 mt-n7"
+                    src="{{ asset('assets/blog/img/bg10.jpg') }}" loading="lazy" alt="card image">
                 </div>
-                <div class="row justify-content-start mt-4">
-                  <div class="col-md-6">
-                    <div class="info">
-                      <i class="material-icons text-3xl text-gradient text-info mb-3">apps</i>
-                      <h5>Prebuilt components</h5>
-                      <p>We get insulted by others, lose trust for those We get back freezes</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="info">
-                      <i class="material-icons text-3xl text-gradient text-info mb-3">3p</i>
-                      <h5>Improved platform</h5>
-                      <p>We get insulted by others, lose trust for those We get back freezes</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 ms-auto mt-lg-0 mt-4">
-                <div class="card">
-                  <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                    <a class="d-block blur-shadow-image">
-                      <img
-                        src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                        alt="img-colored-shadow" class="img-fluid border-radius">
-                    </a>
-                  </div>
-                  <div class="card-body text-center">
-                    <h5 class="font-weight-normal">
-                      <a href="javascript:;">Get insights on Search</a>
-                    </h5>
-                    <p class="mb-0">
-                      Website visitors today demand a frictionless user expericence — especially when using search.
-                      Because of the hight standards.
-                    </p>
-                    <button type="button" class="btn bg-gradient-info btn-sm mb-0 mt-3">Find out more</button>
+                <div class="col-xl-7 col-md-5 z-index-2 position-relative px-md-3 px-5 my-md-auto mt-4">
+                  <i class="material-icons text-light text-5xl">format_quote</i>
+                  <p class="text-lg text-light">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat eaque nesciunt mollitia facilis
+                    suscipit. Maxime officiis ipsa, ab saepe, beatae omnis repellat accusantium magni debitis nesciunt
+                    nam possimus asperiores doloribus!
+                  </p>
+                  <p class="text-light font-weight-bold text-sm">Michael - <span
+                      class="text-xs font-weight-normal">Writter</span></p>
+                  <hr class="vertical start-100 ms-n5 d-xl-block d-none">
+                  <div class="button">
+                    <button url="/sejarah-singkat" type="button" class="btn bg-gradient-info btn-sm mb-0 mt-3">Read
+                      More</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <!-- END Section with four info areas left & one card right with image and waves -->
-        <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
-        <section class="pb-5 position-relative bg-gradient-dark mx-n3">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
-                <h3 class="mb-5 mt-5 text-white">Check my latest blogposts</h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-3 col-sm-6">
-                <div class="card card-plain">
-                  <div class="card-header p-0 position-relative">
-                    <a class="d-block blur-shadow-image">
-                      <img src="{{ asset('assets/blog/img/examples/testimonial-6-2.jpg') }}" alt="img-blur-shadow"
-                        class="img-fluid shadow border-radius" loading="lazy">
-                    </a>
-                  </div>
-                  <div class="card-body px-0">
-                    <h5>
-                      <a href="javascript:;" class="text-light font-weight-bold">Rover raised $65 million</a>
-                    </h5>
-                    <p>
-                      Finding temporary housing for your dog should be as easy as
-                      renting an Airbnb. That’s the idea behind Rover ...
-                    </p>
-                    <a href="javascript:;" class="text-info text-sm icon-move-right">Read More
-                      <i class="fas fa-arrow-right text-xs ms-1"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="card card-plain">
-                  <div class="card-header p-0 position-relative">
-                    <a class="d-block blur-shadow-image">
-                      <img src="{{ asset('assets/blog/img/examples/testimonial-6-3.jpg') }}" alt="img-blur-shadow"
-                        class="img-fluid shadow border-radius" loading="lazy">
-                    </a>
-                  </div>
-                  <div class="card-body px-0">
-                    <h5>
-                      <a href="javascript:;" class="text-light font-weight-bold">MateLabs machine learning</a>
-                    </h5>
-                    <p>
-                      If you’ve ever wanted to train a machine learning model
-                      and integrate it with IFTTT, you now can with ...
-                    </p>
-                    <a href="javascript:;" class="text-info text-sm icon-move-right">Read More
-                      <i class="fas fa-arrow-right text-xs ms-1"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="card card-plain">
-                  <div class="card-header p-0 position-relative">
-                    <a class="d-block blur-shadow-image">
-                      <img src="{{ asset('assets/blog/img/examples/blog-9-4.jpg') }}" alt="img-blur-shadow"
-                        class="img-fluid shadow border-radius" loading="lazy">
-                    </a>
-                  </div>
-                  <div class="card-body px-0">
-                    <h5>
-                      <a href="javascript:;" class="text-light font-weight-bold">MateLabs machine learning</a>
-                    </h5>
-                    <p>
-                      If you’ve ever wanted to train a machine learning model
-                      and integrate it with IFTTT, you now can with ...
-                    </p>
-                    <a href="javascript:;" class="text-info text-sm icon-move-right">Read More
-                      <i class="fas fa-arrow-right text-xs ms-1"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="card card-plain">
-                  <div class="card-header p-0 position-relative">
-                    <a class="d-block blur-shadow-image">
-                      <img src="{{ asset('assets/blog/img/examples/blog2.jpg') }}" alt="img-blur-shadow"
-                        class="img-fluid shadow border-radius" loading="lazy">
-                    </a>
-                  </div>
-                  <div class="card-body px-0">
-                    <h5>
-                      <a href="javascript:;" class="text-light font-weight-bold">MateLabs machine learning</a>
-                    </h5>
-                    <p>
-                      If you’ve ever wanted to train a machine learning model
-                      and integrate it with IFTTT, you now can with ...
-                    </p>
-                    <a href="javascript:;" class="text-info text-sm icon-move-right">Read More
-                      <i class="fas fa-arrow-right text-xs ms-1"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+        </div>
+      </section>
 
+      <section class="my-3">
+        <div class="card shadow-lg mt-n5 mx-4 mb-4">
+          <div class="card-body">
+            <div class="container-fluid px-0">
+              <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-sm-0 mb-4">
+                  <div class="info-horizontal border-radius-xl p-4 d-block d-md-flex ">
+                    <i class="material-icons text-3xl text-gradient text-info">tune</i>
+                    <div class="description ps-0 ps-md-3">
+                      <h5>Pendaftaran</h5>
+                      <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that
+                        process
+                        will continue whatever.</p>
+                      <a href="#" class="text-dark icon-move-right">
+                        Read More
+                        <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 px-lg-1">
+                  <div class="info-horizontal border-radius-xl p-4 d-block d-md-flex ">
+                    <i class="material-icons text-3xl text-gradient text-info">settings_suggest</i>
+                    <div class="description ps-0 ps-md-3">
+                      <h5>Fasilitas Kampus</h5>
+                      <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that
+                        process
+                        will continue whatever.</p>
+                      <a href="#" class="text-dark icon-move-right">
+                        Read More
+                        <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-lg-0 mt-4">
+                  <div class="info-horizontal bg-gradient-info border-radius-xl p-4 d-block d-md-flex ">
+                    <i class="material-icons text-3xl text-white">compare</i>
+                    <div class="description ps-0 ps-md-3">
+                      <h5 class="text-white">Beasiswa</h5>
+                      <p class="text-white">The Arctic Ocean freezes every winter and much of the sea-ice then thaws
+                        every
+                        summer, and that process will continue whatever.</p>
+                      <a href="#" class="text-white icon-move-right">
+                        Read More
+                        <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
-        <!-- -------- END Features w/ pattern background & stats & rocket -------- -->
-        <section class="pt-4 pb-6" id="count-stats">
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 justify-content-center d-flex flex-column pl-lg-5 pt-lg-0 pt-3"
+                    data-aos="fade-right">
+                    <h2 class="category text-info mt-3">Penelitian</h2>
+                    <h4 class="card-title">
+                      <a href="#" class="text-dark">Warner Music Group buys concert discovery service
+                        Songkick</a>
+                    </h4>
+                    <p class="card-description">
+                      Warner Music Group announced today it’s acquiring the selected assets of the music platform
+                      Songkick,
+                      including its app for finding concerts and the company’s trademark. Songkick has been involved
+                      in a
+                      lawsuit against the major… <a href="#" class="text-darker icon-move-right text-sm">Read
+                        More
+                        <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
+                      </a>
+                    </p>
+                  </div>
+                  <div class="col-lg-6 justify-content-center d-flex flex-column" data-aos="fade-left">
+                    <div class="card">
+                      <div class="d-block blur-shadow-image">
+                        <img src="{{ asset('assets/blog/img/bg2.jpg') }}" alt="img-blur-shadow-blog-2"
+                          class="img-fluid border-radius-lg" loading="lazy">
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row mt-5">
+                  <div class="col-lg-6 justify-content-center d-flex flex-column">
+                    <div class="card">
+                      <div class="d-block blur-shadow-image">
+                        <img src="{{ asset('assets/blog/img/bg3.jpg') }}" alt="img-blur-shadow-blog-2"
+                          class="img-fluid border-radius-xl" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 justify-content-center d-flex flex-column pl-lg-5 pt-lg-0 pt-3">
+                    <h2 class="category text-info mt-3">Pengabdian</h2>
+                    <h4 class="card-title">
+                      <a href="#" class="text-dark">Interesting factoids I bet you never knew about
+                        Creative
+                        Tim</a>
+                    </h4>
+                    <p class="card-description">
+                      Warner Music Group announced today it’s acquiring the selected assets of the music platform
+                      Songkick,
+                      including its app for finding concerts and the company’s trademark. Songkick has been involved
+                      in a
+                      lawsuit against the major… <a href="#" class="text-darker icon-move-right text-sm">Read
+                        More
+                        <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-6">
+        <div class="container">
+          <div class="row">
+            <div class="col-9 text-center mx-auto" data-aos="fade-up">
+              <h2 class="mb-1 text-info">Berita Terbaru</h2>
+              <p class="mb-6 px-md-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, inventore maiores
+                quisquam tenetur debitis nobis non.</p>
+            </div>
+            <div class="col-lg-4 mb-lg-0 mb-4">
+              <div class="card">
+                <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                  <a href="#" class="d-block blur-shadow-image">
+                    <img src="{{ asset('assets/blog/img/bg2.jpg') }}" class="img-fluid border-radius-md" alt="anastasia"
+                      loading="lazy">
+                  </a>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="card-title mt-3 h5 d-block text-darker">
+                    Shared Coworking
+                  </a>
+                  <p class="card-description mb-4">
+                    Use border utilities to quickly style the border and border-radius of an element. Great for images,
+                    buttons.
+                  </p>
+                  <div class="author align-items-center">
+                    <img src="{{ asset('assets/blog/img/team-1.jpg') }}" alt="..." class="avatar shadow" loading="lazy">
+                    <div class="name ps-2">
+                      <span>Mathew Glock</span>
+                      <div class="stats">
+                        <small>Posted on 28 February</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-lg-0 mb-4">
+              <div class="card">
+                <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                  <a href="#" class="d-block blur-shadow-image">
+                    <img src="{{ asset('assets/blog/img/bg3.jpg') }}" class="img-fluid border-radius-md" alt="nastuh"
+                      loading="lazy">
+                  </a>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="text-darker card-title mt-3 h5 d-block">
+                    Really Housekeeping
+                  </a>
+                  <p class="card-description mb-4">
+                    Use border utilities to quickly style the border and border-radius of an element. Great for images,
+                    buttons.
+                  </p>
+                  <div class="author align-items-center">
+                    <img src="{{ asset('assets/blog/img/team-2.jpg') }}" alt="ivana" class="avatar shadow"
+                      loading="lazy">
+                    <div class="name ps-2">
+                      <span>Mathew Glock</span>
+                      <div class="stats">
+                        <small>Posted on 28 February</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-lg-0 mb-4">
+              <div class="card">
+                <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                  <a href="#" class="d-block blur-shadow-image">
+                    <img src="{{ asset('assets/blog/img/bg.jpg') }}" class="img-fluid border-radius-md" alt="annie"
+                      loading="lazy">
+                  </a>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="text-darker card-title mt-3 h5 d-block">
+                    Shared Coworking
+                  </a>
+                  <p class="card-description mb-4">
+                    Use border utilities to quickly style the border and border-radius of an element. Great for images,
+                    buttons.
+                  </p>
+                  <div class="author align-items-center">
+                    <img src="{{ asset('assets/blog/img/team-3.jpg') }}" alt="marie" class="avatar shadow"
+                      loading="lazy">
+                    <div class="name ps-2">
+                      <span>Mathew Glock</span>
+                      <div class="stats">
+                        <small>Posted on 28 February</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pt-3 pb-4" id="count-stats">
+        <div class=" bg-gradient-dark">
           <div class="container">
-            <div class="row justify-content-center text-center mt-7">
-              <div class="col-md-3">
-                <h1 class="text-gradient text-info" id="state1" countTo="5234">0</h1>
-                <h5>Projects</h5>
-                <p>Of “high-performing” level are led by a certified project manager</p>
-              </div>
-              <div class="col-md-3">
-                <h1 class="text-gradient text-info"><span id="state2" countTo="3400">0</span>+</h1>
-                <h5>Hours</h5>
-                <p>That meets quality standards required by our users</p>
-              </div>
-              <div class="col-md-3">
-                <h1 class="text-gradient text-info"><span id="state3" countTo="24">0</span>/7</h1>
-                <h5>Support</h5>
-                <p>Actively engage team members that finishes on time</p>
+            <div class="row">
+              <div class="col-lg-9 mx-auto py-3">
+                <div class="row">
+                  <div class="col-md-4 position-relative">
+                    <div class="p-3 text-center">
+                      <h1 class="text-gradient text-info"><span id="state1" countto="15">15</span></h1>
+                      <h5 class="mt-3 text-light">Prodi</h5>
+                    </div>
+                    <hr class="vertical light">
+                  </div>
+                  <div class="col-md-4 position-relative">
+                    <div class="p-3 text-center">
+                      <h1 class="text-gradient text-info"><span id="state2" countto="75">75</span></h1>
+                      <h5 class="mt-3 text-light">Pengajar</h5>
+                    </div>
+                    <hr class="vertical light">
+                  </div>
+                  <div class="col-md-4">
+                    <div class="p-3 text-center">
+                      <h1 class="text-gradient text-info"><span id="state3" countto="1000">1000</span>+</h1>
+                      <h5 class="mt-3 text-light">Mahasiswa</h5>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
     </div>
+  </div>
 </section>
 
 @include('blog.partials.footer')

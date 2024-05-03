@@ -19,17 +19,10 @@
                                         <div
                                             class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
                                             <div class="bg-gradient-info shadow-dark border-radius-lg p-4">
-                                                <h3 class="text-white mb-0">Sejarah Singkat</h3>
+                                                <h3 class="text-white mb-0">Program Magister</h3>
                                             </div>
                                         </div>
-                                        <div class="card-body p-5 pt-0">
-                                            <div class="card-image position-relative text-center border-radius-lg my-5">
-                                                <div class="blur-shadow-image">
-                                                    <img class="img border-radius-lg col-lg-9 col-md-7"
-                                                        src="{{ asset('assets/blog/img/bg.jpg') }}" alt="architecture"
-                                                        loading="lazy">
-                                                </div>
-                                            </div>
+                                        <div class="card-body p-5 pt-0 mt-5">
                                             <p>
 
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget
