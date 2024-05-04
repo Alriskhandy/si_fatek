@@ -38,13 +38,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/charts/flot.html" class="nav-link">
+                            <a href="{{ route('sejarah') }}"
+                                class="nav-link {{ request()->routeIs('sejarah') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Sejarah Singkat</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/charts/inline.html" class="nav-link">
+                            <a href="{{ route('visi-misi') }}" class="nav-link {{ request()->routeIs('visi-misi') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Visi, Misi dan Sasaran</p>
                             </a>
