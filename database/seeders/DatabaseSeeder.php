@@ -37,5 +37,8 @@ class DatabaseSeeder extends Seeder
         Profil::create([
             'title' => 'visi-misi'
         ]);
+        Profil::create([
+            'title' => 'struktur'
+        ]);
     }
 }

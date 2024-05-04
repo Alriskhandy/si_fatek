@@ -45,13 +45,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('visi-misi') }}" class="nav-link {{ request()->routeIs('visi-misi') ? 'active' : '' }}">
+                            <a href="{{ route('visi-misi') }}"
+                                class="nav-link {{ request()->routeIs('visi-misi') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Visi, Misi dan Sasaran</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/charts/uplot.html" class="nav-link">
+                            <a href="{{ route('struktur') }}"
+                                class="nav-link {{ request()->routeIs('struktur') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Struktur Organisasi</p>
                             </a>

@@ -39,6 +39,11 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
         Route::get('/visi-misi', [ProfilController::class, 'visimisi'])->name('visi-misi');
         Route::get('/visi-misi/edit', [ProfilController::class, 'editVisiMisi'])->name('edit-visi-misi');
         Route::put('/visi-misi', [ProfilController::class, 'updateVisiMisi'])->name('update-visi-misi');
+
+        // STRUKTUR ORGANISASI
+        Route::get('/struktur-organisasi', [ProfilController::class, 'struktur'])->name('struktur');
+        Route::get('/struktur-organisasi/edit', [ProfilController::class, 'editStruktur'])->name('edit-struktur');
+        Route::put('/struktur-organisasi', [ProfilController::class, 'updateStruktur'])->name('update-struktur');
     });
 
     Route::get('/kelola-pengguna', [KelolaUserController::class, 'show'])->middleware(['IsAdmin'])->name('kelola-pengguna');

@@ -88,5 +88,48 @@ class ProfilController extends Controller
             return redirect()->route('visi-misi')->with('status', 'error')->with('message', $e->getMessage());
         }
     }
-    
+
+    public function struktur(): View
+    {
+        $data = Profil::findOrFail(3);
+
+        return view('dashboard.profil.struktur-organisasi.main-struktur')->with(compact('data'));
+    }
+
+    public function editStruktur(): View
+    {
+        $data = Profil::findOrFail(3);
+
+        return view('dashboard.profil.struktur-organisasi.edit-struktur')->with(compact('data'));
+    }
+
+    public function updateStruktur(Request $request)
+    {
+        $data = Profil::findOrFail(3);
+
+        $validatedData = $request->validate([
+            'image_path' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+
+        try {
+            if ($request->hasFile('image_path')) {
+                if ($data->image_path) {
+                    Storage::delete('public/' . $data->image_path);
+                }
+
+                $uniqueFileName = $request->file('image_path')->hashName();
+                $request->file('image_path')->storeAs('public/ProfilImage', $uniqueFileName);
+                $validatedData['image_path'] = 'profilimage/' . $uniqueFileName;
+            }
+
+            // Update artikel
+            $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
+
+            // Berikan pesan sukses jika berhasil
+            return redirect()->route('struktur')->with('status', 'updated-success');
+        } catch (\Exception $e) {
+            // Tangani kesalahan jika terjadi
+            return redirect()->route('struktur')->with('status', 'error')->with('message', $e->getMessage());
+        }
+    }
 }
