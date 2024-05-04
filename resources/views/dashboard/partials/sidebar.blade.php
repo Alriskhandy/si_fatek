@@ -13,7 +13,8 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- BERANDA -->
                 <li class="nav-item">
-                    <a href="{{ route('dashboard') }}" class="nav-link">
+                    <a href="{{ route('dashboard') }}"
+                        class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-home"></i>
                         <p>Beranda</p>
                     </a>
@@ -30,7 +31,8 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('berita') }}" class="nav-link">
+                            <a href="{{ route('berita') }}"
+                                class="nav-link {{ request()->routeIs('berita') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Berita</p>
                             </a>
@@ -335,7 +337,8 @@
                 <!-- KELOLA PENGGUNA -->
                 @can('IsAdmin')
                 <li class="nav-item">
-                    <a href="{{ route('kelola-pengguna') }}" class="nav-link">
+                    <a href="{{ route('kelola-pengguna') }}"
+                        class="nav-link {{ request()->routeIs('kelola-pengguna') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-users"></i>
                         <p>Kelola Pengguna</p>
                     </a>

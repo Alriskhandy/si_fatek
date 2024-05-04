@@ -92,7 +92,7 @@
                                                 data-article-name="{{ $post->title }}">Hapus</a>
                                         </div>
                                     </div>
-                                    @include('dashboard.berita.partials.delete-modal')
+                                    @include('dashboard.profil.berita.partials.delete-modal')
                                 </td>
                             </tr>
                             @endforeach
@@ -145,8 +145,5 @@
             });
         });
     </script>
-
     @endpush
-
-
 </x-dashboard-layout>

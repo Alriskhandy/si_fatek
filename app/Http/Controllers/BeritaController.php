@@ -23,13 +23,13 @@ class BeritaController extends Controller
 
         $data = $query->orderBy('updated_at', 'desc')->orderBy('created_at', 'desc')->paginate(10);
 
-        return view('dashboard.berita.main-berita', compact('data'));
+        return view('dashboard.profil.berita.main-berita', compact('data'));
     }
 
     public function create(): View
     {
         // dd($data);
-        return view('dashboard.berita.tambah-berita');
+        return view('dashboard.profil.berita.tambah-berita');
     }
 
     public function store(Request $request)
@@ -65,7 +65,7 @@ class BeritaController extends Controller
     public function show($slug): View
     {
         $post = Berita::where('slug', $slug)->firstOrFail();
-        return view('dashboard.berita.detail-berita', [
+        return view('dashboard.profil.berita.detail-berita', [
             'post' => $post
         ]);
     }
@@ -73,7 +73,7 @@ class BeritaController extends Controller
     public function edit($slug): View
     {
         $post = Berita::where('slug', $slug)->firstOrFail();
-        return view('dashboard.berita.ubah-berita', [
+        return view('dashboard.profil.berita.ubah-berita', [
             'post' => $post
         ]);
     }

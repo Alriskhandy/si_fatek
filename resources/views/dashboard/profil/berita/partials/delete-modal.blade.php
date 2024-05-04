@@ -7,7 +7,7 @@
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Hapus Berita</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form method="post" action="{{ route('berita.delete', $post->id) }}">
+        <form method="post" action="{{ route('delete-berita', $post->id) }}">
                 @csrf
                 @method('delete')
                 <div class="modal-body">
