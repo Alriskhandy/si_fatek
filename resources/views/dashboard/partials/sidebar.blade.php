@@ -59,13 +59,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/charts/uplot.html" class="nav-link">
+                            <a href="{{ route('manajemen') }}"
+                                class="nav-link {{ request()->routeIs('manajemen') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Manajemen</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/charts/uplot.html" class="nav-link">
+                            <a href="{{ route('master-plan') }}"
+                                class="nav-link {{ request()->routeIs('master-plan') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Master Plan</p>
                             </a>

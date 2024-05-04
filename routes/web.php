@@ -44,6 +44,16 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
         Route::get('/struktur-organisasi', [ProfilController::class, 'struktur'])->name('struktur');
         Route::get('/struktur-organisasi/edit', [ProfilController::class, 'editStruktur'])->name('edit-struktur');
         Route::put('/struktur-organisasi', [ProfilController::class, 'updateStruktur'])->name('update-struktur');
+
+        // MANAJEMEN
+        Route::get('/manajemen', [ProfilController::class, 'manajemen'])->name('manajemen');
+        Route::get('/manajemen/edit', [ProfilController::class, 'editManajemen'])->name('edit-manajemen');
+        Route::put('/manajemen', [ProfilController::class, 'updateManajemen'])->name('update-manajemen');
+
+        // MASTER PLAN
+        Route::get('/master-plan', [ProfilController::class, 'masterPlan'])->name('master-plan');
+        Route::put('/master-plan', [ProfilController::class, 'updateMasterPlan'])->name('update-master-plan');
+        Route::put('/clear-master-plan', [ProfilController::class, 'clearMasterPlan'])->name('clear-master-plan');
     });
 
     Route::get('/kelola-pengguna', [KelolaUserController::class, 'show'])->middleware(['IsAdmin'])->name('kelola-pengguna');

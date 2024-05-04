@@ -40,5 +40,11 @@ class DatabaseSeeder extends Seeder
         Profil::create([
             'title' => 'struktur'
         ]);
+        Profil::create([
+            'title' => 'manajemen'
+        ]);
+        Profil::create([
+            'title' => 'master-plan'
+        ]);
     }
 }
