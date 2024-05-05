@@ -3,8 +3,10 @@
 use App\Http\Controllers\AkademikController;
 use App\Http\Controllers\AkreditasiController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\GuruBesarController;
 use App\Http\Controllers\InovasiController;
+use App\Http\Controllers\KekayaanIntelektualController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KelolaUserController;
 use App\Http\Controllers\KemahasiswaanController;
@@ -13,7 +15,6 @@ use App\Http\Controllers\KerjasamaLNController;
 use App\Http\Controllers\PenelitianController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\TenagaPendidikController;
-use App\Models\Akademik;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -158,6 +159,11 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
         Route::post('/inovasi', [InovasiController::class, 'store'])->name('store-inovasi');
         Route::delete('/inovasi/{id}', [InovasiController::class, 'destroy'])->name('delete-inovasi');
         Route::put('/inovasi/{id}', [InovasiController::class, 'update'])->name('update-inovasi');
+
+        // HAK KEKAYAAN INTELEKTUAL
+        Route::get('/hak-kekayaan-intelektual', [KekayaanIntelektualController::class, 'index'])->name('hak-kekayaan-intelektual');
+        Route::get('/hak-kekayaan-intelektual/edit', [KekayaanIntelektualController::class, 'edit'])->name('edit-hak-kekayaan-intelektual');
+        Route::put('/hak-kekayaan-intelektual', [KekayaanIntelektualController::class, 'update'])->name('update-hak-kekayaan-intelektual');
     });
 
     Route::prefix('/kemitraan')->group(function () {
@@ -173,6 +179,14 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
         Route::post('/kerjasama-luar-negeri', [KerjasamaLNController::class, 'store'])->name('store-kerjasama-ln');
         Route::delete('/kerjasama-luar-negeri/{id}', [KerjasamaLNController::class, 'destroy'])->name('delete-kerjasama-ln');
         Route::put('/kerjasama-luar-negeri/{id}', [KerjasamaLNController::class, 'update'])->name('update-kerjasama-ln');
+    });
+
+    Route::prefix('/gpm-pr')->group(function () {
+
+        // GALERI
+        Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri');
+        Route::post('/galeri', [GaleriController::class, 'store'])->name('store-galeri');
+        Route::delete('/galeri/{id}', [GaleriController::class, 'destroy'])->name('delete-galeri');
     });
 
     Route::get('/kelola-pengguna', [KelolaUserController::class, 'show'])->middleware(['IsAdmin'])->name('kelola-pengguna');

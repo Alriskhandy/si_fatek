@@ -6,6 +6,7 @@ use App\Models\Akademik;
 use App\Models\User;
 use App\Models\Profil;
 use App\Models\Berita;
+use App\Models\KekayaanIntelektual;
 use App\Models\Kemahasiswaan;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -82,6 +83,10 @@ class DatabaseSeeder extends Seeder
         ]);
         Kemahasiswaan::create([
             'title' => 'aturan'
+        ]);
+
+        KekayaanIntelektual::create([
+            'title' => 'hak_kekayaan_intelektual'
         ]);
     }
 }

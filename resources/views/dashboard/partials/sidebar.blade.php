@@ -236,7 +236,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
+                            <a href="{{ route('hak-kekayaan-intelektual') }}"
+                                class="nav-link {{ request()->routeIs('hak-kekayaan-intelektual') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Hak & Kekayaan Intelektual</p>
                             </a>
@@ -318,7 +319,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
+                            <a href="{{ route('galeri') }}"
+                                class="nav-link {{ request()->routeIs('galeri') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Galeri</p>
                             </a>
