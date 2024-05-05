@@ -6,6 +6,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GuruBesarController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KelolaUserController;
+use App\Http\Controllers\KemahasiswaanController;
 use App\Http\Controllers\KerjasamaDNController;
 use App\Http\Controllers\KerjasamaLNController;
 use App\Http\Controllers\ProfilController;
@@ -20,7 +21,7 @@ Route::get('/', function () {
 // Check Slug
 Route::get('/berita/checkSlug', [BeritaController::class, 'checkSlug']);
 
-// DASHBOARD
+// DASHBOARDP
 Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/', function () {
         return view('dashboard.index');
@@ -110,6 +111,39 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
         Route::post('/tenaga-kependidikan', [TenagaPendidikController::class, 'store'])->name('store-tenaga-kependidikan');
         Route::delete('/tenaga-kependidikan/{id}', [TenagaPendidikController::class, 'destroy'])->name('delete-tenaga-kependidikan');
         Route::put('/tenaga-kependidikan/{id}', [TenagaPendidikController::class, 'update'])->name('update-tenaga-kependidikan');
+
+        // SARANA & PRASARANA
+    });
+
+    Route::prefix('/kemahasiswaan')->group(function () {
+
+        // UPT ASRAMA (ASRAMA TEKNIK)
+        Route::get('/asrama', [KemahasiswaanController::class, 'asrama'])->name('asrama');
+        Route::get('/asrama/edit', [KemahasiswaanController::class, 'editAsrama'])->name('edit-asrama');
+        Route::put('/asrama', [KemahasiswaanController::class, 'updateAsrama'])->name('update-asrama');
+
+        // PENGEMBANGAN KARAKTER MAHASISWA
+        Route::get('/pengembangan-karakter', [KemahasiswaanController::class, 'pengembanganKarakter'])->name('pengembangan-karakter');
+        Route::get('/pengembangan-karakter/edit', [KemahasiswaanController::class, 'editPengembanganKarakter'])->name('edit-pengembangan-karakter');
+        Route::put('/pengembangan-karakter', [KemahasiswaanController::class, 'updatePengembanganKarakter'])->name('update-pengembangan-karakter');
+
+        // PENGEMBANGAN KARAKTER MAHASISWA
+        Route::get('/peningkatan-prestasi', [KemahasiswaanController::class, 'peningkatanPrestasi'])->name('peningkatan-prestasi');
+        Route::get('/peningkatan-prestasi/edit', [KemahasiswaanController::class, 'editPeningkatanPrestasi'])->name('edit-peningkatan-prestasi');
+        Route::put('/peningkatan-prestasi', [KemahasiswaanController::class, 'updatePeningkatanPrestasi'])->name('update-peningkatan-prestasi');
+
+        // ALUMNI
+        Route::get('/alumni', [KemahasiswaanController::class, 'alumni'])->name('alumni');
+        Route::get('/alumni/edit', [KemahasiswaanController::class, 'editAlumni'])->name('edit-alumni');
+        Route::put('/alumni', [KemahasiswaanController::class, 'updateAlumni'])->name('update-alumni');
+
+        // ATURAN
+        Route::get('/aturan', [KemahasiswaanController::class, 'aturan'])->name('aturan');
+        Route::get('/aturan/edit', [KemahasiswaanController::class, 'editAturan'])->name('edit-aturan');
+        Route::put('/aturan', [KemahasiswaanController::class, 'updateAturan'])->name('update-aturan');
+    });
+
+    Route::prefix('/riset-inovasi')->group(function () {
     });
 
     Route::prefix('/kemitraan')->group(function () {

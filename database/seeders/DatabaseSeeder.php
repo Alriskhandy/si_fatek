@@ -6,6 +6,7 @@ use App\Models\Akademik;
 use App\Models\User;
 use App\Models\Profil;
 use App\Models\Berita;
+use App\Models\Kemahasiswaan;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -32,6 +33,7 @@ class DatabaseSeeder extends Seeder
 
         Berita::factory(15)->create();
 
+        // PROFIL FATEK
         Profil::create([
             'title' => 'sejarah'
         ]);
@@ -48,6 +50,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'master-plan'
         ]);
 
+        // AKADEMIK
         Akademik::create([
             'title' => 'departemen'
         ]);
@@ -62,6 +65,23 @@ class DatabaseSeeder extends Seeder
         ]);
         Akademik::create([
             'title' => 'kalender'
+        ]);
+
+        // KEMAHASISWAAN
+        Kemahasiswaan::create([
+            'title' => 'asrama'
+        ]);
+        Kemahasiswaan::create([
+            'title' => 'pengembangan_karakter'
+        ]);
+        Kemahasiswaan::create([
+            'title' => 'peningkatan_prestasi'
+        ]);
+        Kemahasiswaan::create([
+            'title' => 'alumni'
+        ]);
+        Kemahasiswaan::create([
+            'title' => 'aturan'
         ]);
     }
 }

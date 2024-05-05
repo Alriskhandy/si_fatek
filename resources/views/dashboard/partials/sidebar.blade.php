@@ -174,31 +174,36 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
+                            <a href="{{ route('asrama') }}"
+                                class="nav-link {{ request()->routeIs('asrama') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>UPT Asrama</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
+                            <a href="{{ route('pengembangan-karakter') }}"
+                                class="nav-link {{ request()->routeIs('pengembangan-karakter') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Pengembangan Karakter Mahasiswa</p>
+                                <p>Pengembangan Karakter</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
+                            <a href="{{ route('peningkatan-prestasi') }}"
+                                class="nav-link {{ request()->routeIs('peningkatan-prestasi') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Peningkatan Prestasi Mahasiswa</p>
+                                <p>Peningkatan Prestasi</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
+                            <a href="{{ route('alumni') }}"
+                                class="nav-link {{ request()->routeIs('alumni') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Alumni</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
+                            <a href="{{ route('aturan') }}"
+                                class="nav-link {{ request()->routeIs('aturan') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Aturan Kemahasiswaan</p>
                             </a>
