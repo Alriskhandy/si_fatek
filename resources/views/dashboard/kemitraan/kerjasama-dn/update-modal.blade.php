@@ -6,7 +6,7 @@
                 <h5 class="modal-title" id="exampleModalLabel">Ubah Data</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form id="createForm" method="post" action="{{ route('update-kerjasama-dn', $k->id) }}"
+            <form id="updateForm" method="post" action="{{ route('update-kerjasama-dn', $k->id) }}"
                 enctype="multipart/form-data">
                 @csrf
                 @method('put')

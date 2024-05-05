@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AkademikController;
+use App\Http\Controllers\AkreditasiController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KelolaUserController;
@@ -81,6 +82,12 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
         Route::get('/program-profesi', [AkademikController::class, 'profesi'])->name('profesi');
         Route::get('/program-profesi/edit', [AkademikController::class, 'editProfesi'])->name('edit-profesi');
         Route::put('/program-profesi', [AkademikController::class, 'updateProfesi'])->name('update-profesi');
+
+        //AKREDITASI
+        Route::get('/akreditasi', [AkreditasiController::class, 'index'])->name('akreditasi');
+        Route::post('/akreditasi', [AkreditasiController::class, 'store'])->name('store-akreditasi');
+        Route::delete('/akreditasi/{id}', [AkreditasiController::class, 'destroy'])->name('delete-akreditasi');
+        Route::put('/akreditasi/{id}', [AkreditasiController::class, 'update'])->name('update-akreditasi');
 
         // PROGRAM KALENDER
         Route::get('/program-kalender', [AkademikController::class, 'kalender'])->name('kalender');

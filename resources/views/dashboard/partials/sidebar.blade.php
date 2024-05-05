@@ -114,7 +114,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/UI/icons.html" class="nav-link">
+                            <a href="{{ route('akreditasi') }}"
+                                class="nav-link {{ request()->routeIs('akreditasi') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Akreditasi</p>
                             </a>
