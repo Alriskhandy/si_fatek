@@ -192,12 +192,6 @@
                         <li class="nav-item">
                             <a href="pages/tables/data.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Mahasiswa Inbound & Outbound</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
                                 <p>Alumni</p>
                             </a>
                         </li>
@@ -205,12 +199,6 @@
                             <a href="pages/tables/data.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Aturan Kemahasiswaan</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Pengumuman</p>
                             </a>
                         </li>
                     </ul>
@@ -300,12 +288,6 @@
                             <a href="pages/tables/data.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Audit Mutu Akademik</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Akreditasi</p>
                             </a>
                         </li>
                         <li class="nav-item">
