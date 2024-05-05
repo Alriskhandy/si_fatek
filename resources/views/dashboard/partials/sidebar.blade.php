@@ -141,7 +141,8 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/forms/general.html" class="nav-link">
+                            <a href="{{ route('guru-besar') }}"
+                                class="nav-link {{ request()->routeIs('guru-besar') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Guru Besar</p>
                             </a>
@@ -156,12 +157,6 @@
                             <a href="pages/forms/advanced.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Sarana & Prasarana</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/forms/advanced.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Perpustakaan</p>
                             </a>
                         </li>
                     </ul>

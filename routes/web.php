@@ -3,6 +3,7 @@
 use App\Http\Controllers\AkademikController;
 use App\Http\Controllers\AkreditasiController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\GuruBesarController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KelolaUserController;
 use App\Http\Controllers\KerjasamaDNController;
@@ -93,6 +94,15 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
         Route::get('/program-kalender', [AkademikController::class, 'kalender'])->name('kalender');
         Route::get('/program-kalender/edit', [AkademikController::class, 'editkalender'])->name('edit-kalender');
         Route::put('/program-kalender', [AkademikController::class, 'updateKalender'])->name('update-kalender');
+    });
+
+    Route::prefix('/sumber-daya')->group(function () {
+        
+        // GURU BESAR
+        Route::get('/guru-besar', [GuruBesarController::class, 'index'])->name('guru-besar');
+        Route::post('/guru-besar', [GuruBesarController::class, 'store'])->name('store-guru-besar');
+        Route::delete('/guru-besar/{id}', [GuruBesarController::class, 'destroy'])->name('delete-guru-besar');
+        Route::put('/guru-besar/{id}', [GuruBesarController::class, 'update'])->name('update-guru-besar');
     });
 
     Route::prefix('/kemitraan')->group(function () {
