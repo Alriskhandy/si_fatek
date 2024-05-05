@@ -3,6 +3,7 @@
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KelolaUserController;
+use App\Http\Controllers\KerjasamaDNController;
 use App\Http\Controllers\ProfilController;
 use Illuminate\Support\Facades\Route;
 
@@ -54,6 +55,16 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
         Route::get('/master-plan', [ProfilController::class, 'masterPlan'])->name('master-plan');
         Route::put('/master-plan', [ProfilController::class, 'updateMasterPlan'])->name('update-master-plan');
         Route::put('/clear-master-plan', [ProfilController::class, 'clearMasterPlan'])->name('clear-master-plan');
+    });
+
+    Route::prefix('/kemitraan')->group(function () {
+
+        // KERJASAMA DALAM NEGERI
+        Route::get('/kerjasama-dalam-negeri', [KerjasamaDNController::class, 'index'])->name('kerjasama-dalam-negeri');
+        Route::post('/kerjasama-dalam-negeri', [KerjasamaDNController::class, 'store'])->name('store-kerjasama-dn');
+        Route::delete('/kerjasama-dalam-negeri/{id}', [KerjasamaDNController::class, 'destroy'])->name('delete-kerjasama-dn');
+        Route::put('/kerjasama-dalam-negeri/{id}', [KerjasamaDNController::class, 'update'])->name('update-kerjasama-dn');
+        // KERJASAMA LUAR NEGERI
     });
 
     Route::get('/kelola-pengguna', [KelolaUserController::class, 'show'])->middleware(['IsAdmin'])->name('kelola-pengguna');

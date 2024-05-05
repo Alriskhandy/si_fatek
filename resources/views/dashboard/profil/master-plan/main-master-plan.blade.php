@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                <!-- Ubah Dokumen Modal -->
+                <!-- Hapus Dokumen Modal -->
                 <div class="modal fade" id="deletePdf" tabindex="-1" aria-labelledby="updatePdfLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">

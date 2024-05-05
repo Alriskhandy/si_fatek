@@ -72,12 +72,6 @@
                                 <p>Master Plan</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/charts/uplot.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Peta Kampus</p>
-                            </a>
-                        </li>
                     </ul>
                 </li>
 
@@ -264,7 +258,8 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/tables/simple.html" class="nav-link">
+                            <a href="{{ route('kerjasama-dalam-negeri') }}"
+                                class="nav-link {{ request()->routeIs('kerjasama-dalam-negeri') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Kerjasama Dalam Negeri</p>
                             </a>
