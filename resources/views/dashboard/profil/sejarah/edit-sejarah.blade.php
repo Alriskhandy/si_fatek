@@ -13,15 +13,14 @@
                             Halaman Utama
                         </li>
                         <li class="breadcrumb-item"><a href="{{ route('sejarah') }}">Sejarah Singkat</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('edit-sejarah') }}">Sejarah Singkat</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('edit-sejarah') }}">Edit</a></li>
                     </ol>
                 </div>
             </div>
         </div>
     </x-slot>
 
-    <form id="update-sejarah" method="post" action="{{ route('update-sejarah') }}"
-        enctype="multipart/form-data">
+    <form id="update-sejarah" method="post" action="{{ route('update-sejarah') }}" enctype="multipart/form-data">
         @csrf
         @method('put')
         <div class="container pb-2">
@@ -38,7 +37,8 @@
                         <div class="col-md-6">
 
                             <div class="flex justify-center">
-                                <img id="image-preview" src="{{ $data->image_path ? asset('storage/' . $data->image_path) : asset('assets/img/image-preview.jpg') }}"
+                                <img id="image-preview"
+                                    src="{{ $data->image_path ? asset('storage/' . $data->image_path) : asset('assets/img/image-preview.jpg') }}"
                                     alt="preview image" style="max-height: 250px;">
                             </div>
 

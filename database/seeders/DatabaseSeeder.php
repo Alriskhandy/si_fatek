@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Akademik;
 use App\Models\User;
 use App\Models\Profil;
 use App\Models\Berita;
@@ -45,6 +46,22 @@ class DatabaseSeeder extends Seeder
         ]);
         Profil::create([
             'title' => 'master-plan'
+        ]);
+
+        Akademik::create([
+            'title' => 'departemen'
+        ]);
+        Akademik::create([
+            'title' => 'magister'
+        ]);
+        Akademik::create([
+            'title' => 'doktor'
+        ]);
+        Akademik::create([
+            'title' => 'profesi'
+        ]);
+        Akademik::create([
+            'title' => 'kalender'
         ]);
     }
 }

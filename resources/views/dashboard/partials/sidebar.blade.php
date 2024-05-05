@@ -86,25 +86,29 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/UI/general.html" class="nav-link">
+                            <a href="{{ route('departemen') }}"
+                                class="nav-link {{ request()->routeIs('departemen') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Departemen</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/UI/icons.html" class="nav-link">
+                            <a href="{{ route('magister') }}"
+                                class="nav-link {{ request()->routeIs('magister') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Program Magister</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/UI/icons.html" class="nav-link">
+                            <a href="{{ route('doktor') }}"
+                                class="nav-link {{ request()->routeIs('doktor') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Program Doktor</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/UI/icons.html" class="nav-link">
+                            <a href="{{ route('profesi') }}"
+                                class="nav-link {{ request()->routeIs('profesi') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Program Profesi</p>
                             </a>
@@ -116,7 +120,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/UI/icons.html" class="nav-link">
+                            <a href="{{ route('kalender') }}"
+                                class="nav-link {{ request()->routeIs('kalender') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Kalender Akademik</p>
                             </a>

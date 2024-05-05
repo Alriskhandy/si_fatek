@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\AkademikController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KelolaUserController;
 use App\Http\Controllers\KerjasamaDNController;
 use App\Http\Controllers\KerjasamaLNController;
 use App\Http\Controllers\ProfilController;
+use App\Models\Akademik;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -56,6 +58,34 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
         Route::get('/master-plan', [ProfilController::class, 'masterPlan'])->name('master-plan');
         Route::put('/master-plan', [ProfilController::class, 'updateMasterPlan'])->name('update-master-plan');
         Route::put('/clear-master-plan', [ProfilController::class, 'clearMasterPlan'])->name('clear-master-plan');
+    });
+
+    Route::prefix('/akademik')->group(function () {
+
+        // DEPARTEMEN
+        Route::get('/departemen', [AkademikController::class, 'departemen'])->name('departemen');
+        Route::get('/departemen/edit', [AkademikController::class, 'editDepartemen'])->name('edit-departemen');
+        Route::put('/departemen', [AkademikController::class, 'updateDepartemen'])->name('update-departemen');
+
+        // PROGRAM MAGISTER
+        Route::get('/program-magister', [AkademikController::class, 'magister'])->name('magister');
+        Route::get('/program-magister/edit', [AkademikController::class, 'editMagister'])->name('edit-magister');
+        Route::put('/program-magister', [AkademikController::class, 'updateMagister'])->name('update-magister');
+
+        // PROGRAM DOKTOR
+        Route::get('/program-doktor', [AkademikController::class, 'doktor'])->name('doktor');
+        Route::get('/program-doktor/edit', [AkademikController::class, 'editDoktor'])->name('edit-doktor');
+        Route::put('/program-doktor', [AkademikController::class, 'updateDoktor'])->name('update-doktor');
+
+        // PROGRAM DOKTOR
+        Route::get('/program-profesi', [AkademikController::class, 'profesi'])->name('profesi');
+        Route::get('/program-profesi/edit', [AkademikController::class, 'editProfesi'])->name('edit-profesi');
+        Route::put('/program-profesi', [AkademikController::class, 'updateProfesi'])->name('update-profesi');
+
+        // PROGRAM KALENDER
+        Route::get('/program-kalender', [AkademikController::class, 'kalender'])->name('kalender');
+        Route::get('/program-kalender/edit', [AkademikController::class, 'editkalender'])->name('edit-kalender');
+        Route::put('/program-kalender', [AkademikController::class, 'updateKalender'])->name('update-kalender');
     });
 
     Route::prefix('/kemitraan')->group(function () {
