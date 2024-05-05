@@ -148,7 +148,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/forms/advanced.html" class="nav-link">
+                            <a href="{{ route('tenaga-kependidikan') }}"
+                                class="nav-link {{ request()->routeIs('tenaga-kependidikan') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tenaga Kependidikan</p>
                             </a>

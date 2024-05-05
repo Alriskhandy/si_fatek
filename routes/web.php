@@ -9,6 +9,7 @@ use App\Http\Controllers\KelolaUserController;
 use App\Http\Controllers\KerjasamaDNController;
 use App\Http\Controllers\KerjasamaLNController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\TenagaPendidikController;
 use App\Models\Akademik;
 use Illuminate\Support\Facades\Route;
 
@@ -97,12 +98,18 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
     });
 
     Route::prefix('/sumber-daya')->group(function () {
-        
+
         // GURU BESAR
         Route::get('/guru-besar', [GuruBesarController::class, 'index'])->name('guru-besar');
         Route::post('/guru-besar', [GuruBesarController::class, 'store'])->name('store-guru-besar');
         Route::delete('/guru-besar/{id}', [GuruBesarController::class, 'destroy'])->name('delete-guru-besar');
         Route::put('/guru-besar/{id}', [GuruBesarController::class, 'update'])->name('update-guru-besar');
+
+        // TENAGA KEPENDIDIKAN
+        Route::get('/tenaga-kependidikan', [TenagaPendidikController::class, 'index'])->name('tenaga-kependidikan');
+        Route::post('/tenaga-kependidikan', [TenagaPendidikController::class, 'store'])->name('store-tenaga-kependidikan');
+        Route::delete('/tenaga-kependidikan/{id}', [TenagaPendidikController::class, 'destroy'])->name('delete-tenaga-kependidikan');
+        Route::put('/tenaga-kependidikan/{id}', [TenagaPendidikController::class, 'update'])->name('update-tenaga-kependidikan');
     });
 
     Route::prefix('/kemitraan')->group(function () {
