@@ -4,6 +4,7 @@ use App\Http\Controllers\AkademikController;
 use App\Http\Controllers\AkreditasiController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GuruBesarController;
+use App\Http\Controllers\InovasiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KelolaUserController;
 use App\Http\Controllers\KemahasiswaanController;
@@ -151,6 +152,12 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
         Route::post('/daftar-penelitian', [PenelitianController::class, 'store'])->name('store-daftar-penelitian');
         Route::delete('/daftar-penelitian/{id}', [PenelitianController::class, 'destroy'])->name('delete-daftar-penelitian');
         Route::put('/daftar-penelitian/{id}', [PenelitianController::class, 'update'])->name('update-daftar-penelitian');
+
+        // HASIL INOVASI
+        Route::get('/inovasi', [InovasiController::class, 'index'])->name('inovasi');
+        Route::post('/inovasi', [InovasiController::class, 'store'])->name('store-inovasi');
+        Route::delete('/inovasi/{id}', [InovasiController::class, 'destroy'])->name('delete-inovasi');
+        Route::put('/inovasi/{id}', [InovasiController::class, 'update'])->name('update-inovasi');
     });
 
     Route::prefix('/kemitraan')->group(function () {

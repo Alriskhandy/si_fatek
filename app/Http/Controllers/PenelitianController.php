@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 
 class PenelitianController extends Controller
 {
-
     public function index(): View
     {
         $data = Penelitian::all();
