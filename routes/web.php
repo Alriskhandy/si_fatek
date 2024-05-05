@@ -9,6 +9,7 @@ use App\Http\Controllers\KelolaUserController;
 use App\Http\Controllers\KemahasiswaanController;
 use App\Http\Controllers\KerjasamaDNController;
 use App\Http\Controllers\KerjasamaLNController;
+use App\Http\Controllers\PenelitianController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\TenagaPendidikController;
 use App\Models\Akademik;
@@ -21,7 +22,7 @@ Route::get('/', function () {
 // Check Slug
 Route::get('/berita/checkSlug', [BeritaController::class, 'checkSlug']);
 
-// DASHBOARDP
+// DASHBOARD
 Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/', function () {
         return view('dashboard.index');
@@ -144,6 +145,12 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
     });
 
     Route::prefix('/riset-inovasi')->group(function () {
+
+        // DAFTAR PENELITIAN
+        Route::get('/daftar-penelitian', [PenelitianController::class, 'index'])->name('daftar-penelitian');
+        Route::post('/daftar-penelitian', [PenelitianController::class, 'store'])->name('store-daftar-penelitian');
+        Route::delete('/daftar-penelitian/{id}', [PenelitianController::class, 'destroy'])->name('delete-daftar-penelitian');
+        Route::put('/daftar-penelitian/{id}', [PenelitianController::class, 'update'])->name('update-daftar-penelitian');
     });
 
     Route::prefix('/kemitraan')->group(function () {
