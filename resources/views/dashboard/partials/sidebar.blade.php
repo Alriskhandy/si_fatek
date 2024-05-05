@@ -265,7 +265,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
+                            <a href="{{ route('kerjasama-luar-negeri') }}"
+                                class="nav-link {{ request()->routeIs('kerjasama-luar-negeri') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Kerjasama Luar Negeri</p>
                             </a>

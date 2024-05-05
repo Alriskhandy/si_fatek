@@ -4,6 +4,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KelolaUserController;
 use App\Http\Controllers\KerjasamaDNController;
+use App\Http\Controllers\KerjasamaLNController;
 use App\Http\Controllers\ProfilController;
 use Illuminate\Support\Facades\Route;
 
@@ -64,7 +65,12 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
         Route::post('/kerjasama-dalam-negeri', [KerjasamaDNController::class, 'store'])->name('store-kerjasama-dn');
         Route::delete('/kerjasama-dalam-negeri/{id}', [KerjasamaDNController::class, 'destroy'])->name('delete-kerjasama-dn');
         Route::put('/kerjasama-dalam-negeri/{id}', [KerjasamaDNController::class, 'update'])->name('update-kerjasama-dn');
+
         // KERJASAMA LUAR NEGERI
+        Route::get('/kerjasama-luar-negeri', [KerjasamaLNController::class, 'index'])->name('kerjasama-luar-negeri');
+        Route::post('/kerjasama-luar-negeri', [KerjasamaLNController::class, 'store'])->name('store-kerjasama-ln');
+        Route::delete('/kerjasama-luar-negeri/{id}', [KerjasamaLNController::class, 'destroy'])->name('delete-kerjasama-ln');
+        Route::put('/kerjasama-luar-negeri/{id}', [KerjasamaLNController::class, 'update'])->name('update-kerjasama-ln');
     });
 
     Route::get('/kelola-pengguna', [KelolaUserController::class, 'show'])->middleware(['IsAdmin'])->name('kelola-pengguna');
