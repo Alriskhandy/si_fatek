@@ -280,7 +280,7 @@
                     </a>
                 </li>
 
-                {{-- GALERI --}}
+                <!-- GALERI -->
                 <li class="nav-item">
                     <a href="{{ route('galeri') }}" class="nav-link {{ request()->routeIs('galeri') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-images"></i>
