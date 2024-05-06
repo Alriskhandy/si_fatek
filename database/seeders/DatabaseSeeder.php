@@ -6,6 +6,7 @@ use App\Models\Akademik;
 use App\Models\User;
 use App\Models\Profil;
 use App\Models\Berita;
+use App\Models\GPM;
 use App\Models\KekayaanIntelektual;
 use App\Models\Kemahasiswaan;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -87,6 +88,25 @@ class DatabaseSeeder extends Seeder
 
         KekayaanIntelektual::create([
             'title' => 'hak_kekayaan_intelektual'
+        ]);
+
+        GPM::create([
+            'title' => 'Profil GPM-PR'
+        ]);
+        GPM::create([
+            'title' => 'Dokumen Mutu'
+        ]);
+        GPM::create([
+            'title' => 'Audit Mutu Akademik Internal'
+        ]);
+        GPM::create([
+            'title' => 'Lam Teknik'
+        ]);
+        GPM::create([
+            'title' => 'Laporan Kepuasan Pengguna'
+        ]);
+        GPM::create([
+            'title' => 'Survei Kepuasan Layanan Mahasiswa'
         ]);
     }
 }

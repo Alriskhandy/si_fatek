@@ -274,58 +274,18 @@
 
                 <!-- GPM-PR -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('gpm-pr') }}" class="nav-link {{ request()->routeIs('gpm-pr') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-chart-line"></i>
-                        <p>
-                            GPM-PR
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
+                        <p>GPM-PR</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/tables/simple.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Profil GPM-PR</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dokumen Mutu</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Audit Mutu Akademik</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>LAM Teknik</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Laporan Kepuasan Pengguna</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Survei Kepuasan Layanan Mahasiswa</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('galeri') }}"
-                                class="nav-link {{ request()->routeIs('galeri') ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Galeri</p>
-                            </a>
-                        </li>
-                    </ul>
+                </li>
+
+                {{-- GALERI --}}
+                <li class="nav-item">
+                    <a href="{{ route('galeri') }}" class="nav-link {{ request()->routeIs('galeri') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-images"></i>
+                        <p>Galeri</p>
+                    </a>
                 </li>
 
                 <!-- KELOLA PENGGUNA -->

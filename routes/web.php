@@ -4,6 +4,7 @@ use App\Http\Controllers\AkademikController;
 use App\Http\Controllers\AkreditasiController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\GPMController;
 use App\Http\Controllers\GuruBesarController;
 use App\Http\Controllers\InovasiController;
 use App\Http\Controllers\KekayaanIntelektualController;
@@ -182,12 +183,18 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
     });
 
     Route::prefix('/gpm-pr')->group(function () {
-
-        // GALERI
-        Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri');
-        Route::post('/galeri', [GaleriController::class, 'store'])->name('store-galeri');
-        Route::delete('/galeri/{id}', [GaleriController::class, 'destroy'])->name('delete-galeri');
+        // PROFIL GPM-PR
+        Route::get('/', [GPMController::class, 'index'])->name('gpm-pr');
+        Route::get('/{id}/edit', [GPMController::class, 'edit'])->name('edit-gpm-pr');
+        Route::put('/{id}', [GPMController::class, 'update'])->name('update-gpm-pr');
+        Route::get('/{id}', [GPMController::class, 'show'])->name('show-gpm-pr');
+        Route::put('/{id}/clear', [GPMController::class, 'destroy'])->name('delete-gpm-pr');
     });
+
+    // GALERI
+    Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri');
+    Route::post('/galeri', [GaleriController::class, 'store'])->name('store-galeri');
+    Route::delete('/galeri/{id}', [GaleriController::class, 'destroy'])->name('delete-galeri');
 
     Route::get('/kelola-pengguna', [KelolaUserController::class, 'show'])->middleware(['IsAdmin'])->name('kelola-pengguna');
 

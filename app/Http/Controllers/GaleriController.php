@@ -14,7 +14,7 @@ class GaleriController extends Controller
     {
         $data = Galeri::all();
 
-        return view('dashboard.gpm-pr.galeri.main')->with('data', $data);
+        return view('dashboard.galeri.main')->with('data', $data);
     }
 
     public function store(Request $request)
