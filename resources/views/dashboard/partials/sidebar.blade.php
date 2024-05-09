@@ -301,7 +301,8 @@
 
                 <!-- EDIT PROFIL -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('edit-profil') }}"
+                        class="nav-link {{ request()->routeIs('edit-profil') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-user"></i>
                         <p>Edit Profil</p>
                     </a>

@@ -196,11 +196,12 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function ()
     Route::post('/galeri', [GaleriController::class, 'store'])->name('store-galeri');
     Route::delete('/galeri/{id}', [GaleriController::class, 'destroy'])->name('delete-galeri');
 
+    // KELOLA PENGGUNA
     Route::get('/kelola-pengguna', [KelolaUserController::class, 'show'])->middleware(['IsAdmin'])->name('kelola-pengguna');
 
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    // EDIT PROFIL
+    Route::get('/edit-profil', [ProfileController::class, 'editProfil'])->name('edit-profil');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('update-profil');
 });
 
 require __DIR__ . '/auth.php';
