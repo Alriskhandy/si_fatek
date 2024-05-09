@@ -84,28 +84,48 @@
                 </div>
             </div>
         </div>
+
         <div class="card mt-3">
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
-                    <thead class="ltr:text-left rtl:text-right">
-                        <tr>
-                            <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Nama</th>
-                            <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Email</th>
-                            <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Tanggal Verifikasi</th>
-                            <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Terakhir Update</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-200">
-                        @foreach ($data as $user)
-                        <tr class="odd:bg-gray-50">
-                            <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{{ $user->name }}</td>
-                            <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $user->email }}</td>
-                            <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $user->email_verified_at }}</td>
-                            <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $user->updated_at->format('d M Y') }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+            <div class="card-header">
+                <h2 class="text-lg font-medium text-gray-900">
+                    {{ __('Tabel Daftar Admin') }}
+                </h2>
+            </div>
+            <div class="card-body">
+                @if(isset($user) && count($user) > 0)
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                        <thead class="ltr:text-left rtl:text-right">
+                            <tr>
+                                <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Nama</th>
+                                <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Email</th>
+                                <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Tanggal Verifikasi
+                                </th>
+                                <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Terakhir Update</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            @foreach ($data as $user)
+                            <tr class="odd:bg-gray-50">
+                                <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{{ $user->name }}</td>
+                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $user->email }}</td>
+                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $user->email_verified_at }}
+                                </td>
+                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $user->updated_at->format('d M
+                                    Y')
+                                    }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                @else
+                <img class="mx-auto rounded-md mb-1" src="{{ asset('assets/img/no-data.png') }}" alt=""
+                    style="max-height: 25rem;">
+                <div class="text-center">
+                    <p>Belum terdapat pengguna lain. Klik tombol tambah</p>
+                </div>
+                @endif
             </div>
         </div>
     </div>
