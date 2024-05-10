@@ -23,6 +23,7 @@
                                             </div>
                                         </div>
                                         <div class="card-body p-1 pt-0">
+                                            @if($data->image_path != null)
                                             <div class="card-image position-relative text-center border-radius-lg my-5">
                                                 <div class="blur-shadow-image">
                                                     <img class="img img-fluid border-radius-lg col-lg-10 col-md-11"
@@ -30,6 +31,11 @@
                                                         alt="architecture" loading="lazy">
                                                 </div>
                                             </div>
+                                            @else
+                                            <div class="text dark mt-6">
+                                                <h2>Not Found!</h2>
+                                            </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

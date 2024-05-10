@@ -23,6 +23,7 @@
                                             </div>
                                         </div>
                                         <div class="card-body p-5 pt-0">
+                                            @if ($data->body != null)
                                             <div class="card-image position-relative text-center border-radius-lg my-5">
                                                 <div class="blur-shadow-image">
                                                     <img class="img border-radius-lg col-lg-9 col-md-7"
@@ -31,6 +32,11 @@
                                                 </div>
                                             </div>
                                             <p>{{ $data->body }}</p>
+                                            @else
+                                            <div class="text dark mt-6">
+                                                <h2>Not Found!</h2>
+                                            </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

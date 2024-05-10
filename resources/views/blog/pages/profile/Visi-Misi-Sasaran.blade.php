@@ -26,7 +26,13 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-10 mx-auto">
+                                                        @if($data->body != null)
                                                         <p>{!! $data->body !!}</p>
+                                                        @else
+                                                        <div class="text dark mt-6">
+                                                            <h2>Not Found!</h2>
+                                                        </div>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>
