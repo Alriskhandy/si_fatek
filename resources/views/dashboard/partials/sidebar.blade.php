@@ -154,12 +154,6 @@
                                 <p>Tenaga Kependidikan</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/forms/advanced.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Sarana & Prasarana</p>
-                            </a>
-                        </li>
                     </ul>
                 </li>
 
