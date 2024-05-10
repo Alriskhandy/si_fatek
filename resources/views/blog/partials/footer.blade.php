@@ -134,9 +134,9 @@
       <div class="col-12">
         <div class="text-center">
           <p class="text-dark my-4 text-sm font-weight-normal">
-            All rights reserved. Copyright © <script>
+            Copyright © <script>
               document.write(new Date().getFullYear())
-            </script> Material Kit by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+            </script> <a href="http://127.0.0.1:8000" target="_blank">Sistem Informasi Fakultas Teknik Unkhair</a>. All rights reserved.
           </p>
         </div>
       </div>

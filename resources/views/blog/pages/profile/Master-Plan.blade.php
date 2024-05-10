@@ -22,11 +22,18 @@
                                                 <h3 class="text-white mb-0">Master Plan</h3>
                                             </div>
                                         </div>
-                                        <div class="card-body p-5 pt-0">
+                                        <div class="card-body p-1 pt-0 text-center">
                                             {{-- Content --}}
+                                            @if ($data->image_path != null)
+                                            <div class="mx-auto my-5" style="max-width: 90%;">
+                                                <iframe src="{{ asset('/laraview/#../storage/'.$data->image_path) }}"
+                                                    style="height: 100vh; width: 100%;"></iframe>
+                                            </div>
+                                            @else
                                             <div class="text dark mt-6">
                                                 <h2>Not Found!</h2>
                                             </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

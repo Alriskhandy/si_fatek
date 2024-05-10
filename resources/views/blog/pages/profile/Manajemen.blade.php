@@ -23,9 +23,12 @@
                                             </div>
                                         </div>
                                         <div class="card-body p-5 pt-0">
-                                            {{-- Content --}}
-                                            <div class="text dark mt-6">
-                                                <h2>Not Found!</h2>
+                                            <div class="card-image position-relative text-center border-radius-lg my-5">
+                                                <div class="blur-shadow-image">
+                                                    <img class="img img-fluid border-radius-lg col-lg-10 col-md-11"
+                                                        src="{{ asset('storage/'.$data->image_path) }}"
+                                                        alt="architecture" loading="lazy">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

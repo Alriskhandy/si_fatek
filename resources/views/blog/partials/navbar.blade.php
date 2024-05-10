@@ -26,24 +26,24 @@
                 </a>
               </li>
 
+              {{-- Profil --}}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
-                  Profile
+                  Profil
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/sambutan-dekan">Sambutan Dekan</a></li>
                   <li><a class="dropdown-item" href="/berita">Berita</a></li>
                   <li><a class="dropdown-item" href="/sejarah-singkat">Sejarah Singkat</a></li>
                   <li><a class="dropdown-item" href="/visi-misi-dan-sasaran">Visi, Misi dan Sasaran</a></li>
-                  <li><a class="dropdown-item" href="/manajemen">Manajemen</a></li>
                   <li><a class="dropdown-item" href="/struktur-organisasi">Struktur Organisasi</a></li>
-                  <li><a class="dropdown-item" href="/peta-fakultas">Peta Fakultas</a></li>
+                  <li><a class="dropdown-item" href="/manajemen">Manajemen</a></li>
                   <li><a class="dropdown-item" href="/master-plan">Master Plan</a></li>
-                  <li><a class="dropdown-item" href="/mediatek">Mediatek</a></li>
+                  <li><a class="dropdown-item" href="/peta-fakultas">Peta Fakultas</a></li>
                 </ul>
               </li>
 
+              {{-- Akademik --}}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,6 +59,7 @@
                 </ul>
               </li>
 
+              {{-- Sumber Daya --}}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
@@ -67,11 +68,10 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="/guru-besar">Guru Besar</a></li>
                   <li><a class="dropdown-item" href="/tenaga-kependidikan">Tenaga Kependidikan</a></li>
-                  <li><a class="dropdown-item" href="/sarana-prasarana">Sarana dan Prasarana</a></li>
-                  <li><a class="dropdown-item" href="/perpustakaan">Perpustakaan</a></li>
                 </ul>
               </li>
 
+              {{-- Kemahasiswaan --}}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
@@ -82,13 +82,12 @@
                       Mahasiswa</a></li>
                   <li><a class="dropdown-item" href="/peningkatan-prestasi-mahasiswa">Peningkatan Prestasi Mahasiswa</a>
                   </li>
-                  <li><a class="dropdown-item" href="/mahasiswa-inbound-outbound">Mahsiswa Inbound dan Outbound</a></li>
                   <li><a class="dropdown-item" href="/alumni">Alumni</a></li>
                   <li><a class="dropdown-item" href="/aturan-kemahasiswaan">Aturan Kemahasiswaan</a></li>
-                  <li><a class="dropdown-item" href="/pengumuman">Pengumuman</a></li>
                 </ul>
               </li>
 
+              {{-- Riset & Inovasi --}}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
@@ -101,6 +100,7 @@
                 </ul>
               </li>
 
+              {{-- Kemitraan --}}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
@@ -112,6 +112,7 @@
                 </ul>
               </li>
 
+              {{-- GPM-PR & Galeri --}}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
@@ -121,24 +122,10 @@
                   <li><a class="dropdown-item" href="/understructure">Profile GPM-PR</a></li>
                   <li><a class="dropdown-item" href="/understructure">Dokumen Mutu</a></li>
                   <li><a class="dropdown-item" href="/understructure">Audit Mutu Akademik Internal</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Akreditasi</a></li>
                   <li><a class="dropdown-item" href="/understructure">LAM TEKNIK</a></li>
                   <li><a class="dropdown-item" href="/understructure">Laporan Kepuasan Pengguna</a></li>
                   <li><a class="dropdown-item" href="/understructure">Survei Kepuasan Layanan Mahsiswa</a></li>
                   <li><a class="dropdown-item" href="/understructure">Galeri</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  COT
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/understructure">COT Website</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Jurnal COT</a></li>
-                  <li><a class="dropdown-item" href="/understructure">COT Newslatter</a></li>
-                  <li><a class="dropdown-item" href="/understructure">U-I-G Collaboration</a></li>
                 </ul>
               </li>
             </ul>
@@ -146,23 +133,13 @@
             <!-- nav Social Media -->
             <ul class="nav navbar-nav">
               <li class="nav-item">
-                <a class="nav-link text-dark" href="https://twitter.com/CreativeTim">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="https://www.facebook.com/CreativeTim">
+                <a class="nav-link text-dark" href="https://www.facebook.com/fakultas.teknik.100">
                   <i class="fab fa-facebook"></i>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-dark" href="https://www.instagram.com/CreativeTimOfficial">
+                <a class="nav-link text-dark" href="https://www.instagram.com/fatekunkhair/">
                   <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w">
-                  <i class="fab fa-youtube"></i>
                 </a>
               </li>
             </ul>
