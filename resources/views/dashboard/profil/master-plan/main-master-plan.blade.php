@@ -48,6 +48,7 @@
                                 <div class="modal-body">
                                     <input type="file" name="image_path" id="file" class="form-control"
                                         placeholder="Pilih dokumen" required>
+                                    <p class="text-danger mt-2">*Catatan: File yang di input harus berupa pdf</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"

@@ -3,7 +3,8 @@
         <div class="container">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Edit UPT Asrama</h1>
+                    <h1 class="m-0">Hak Kekayaan
+                        Intelektual</h1>
                 </div>
 
                 <div class="col-sm-6">
@@ -13,15 +14,22 @@
                             Halaman Utama
                         </li>
                         <li class="breadcrumb-item"><a href="#">Riset & Inovasi</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('hak-kekayaan-intelektual') }}">Hak Kekayaan Intelektual</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('hak-kekayaan-intelektual') }}">Hak Kekayaan
+                                Intelektual</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('edit-hak-kekayaan-intelektual') }}">Edit</a></li>
                     </ol>
                 </div>
             </div>
+            <div class="flex justify-between items-center mb-1 mt-3">
+                <a href="{{ route('hak-kekayaan-intelektual') }}">
+                    <x-blue-button type="submit" class="btn btn-secondary">Kembali</x-blue-button>
+                </a>
+            </div>
         </div>
     </x-slot>
 
-    <form id="update-asrama" method="post" action="{{ route('update-hak-kekayaan-intelektual') }}" enctype="multipart/form-data">
+    <form id="update-asrama" method="post" action="{{ route('update-hak-kekayaan-intelektual') }}"
+        enctype="multipart/form-data">
         @csrf
         @method('put')
         <div class="container pb-2">

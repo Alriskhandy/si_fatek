@@ -12,15 +12,22 @@
                             <i class="nav-icon fas fa-house ml-1"></i>
                             Halaman Utama
                         </li>
-                        <li class="breadcrumb-item"><a href="{{ route('pengembangan-karakter') }}">Pengembangan Karakter Mahasiswa</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('pengembangan-karakter') }}">Pengembangan Karakter
+                                Mahasiswa</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('edit-pengembangan-karakter') }}">Edit</a></li>
                     </ol>
                 </div>
             </div>
+            <div class="flex justify-between items-center mb-1 mt-3">
+                <a href="{{ route('pengembangan-karakter') }}">
+                    <x-blue-button type="submit" class="btn btn-secondary">Kembali</x-blue-button>
+                </a>
+            </div>
         </div>
     </x-slot>
 
-    <form id="update-asrama" method="post" action="{{ route('update-pengembangan-karakter') }}" enctype="multipart/form-data">
+    <form id="update-asrama" method="post" action="{{ route('update-pengembangan-karakter') }}"
+        enctype="multipart/form-data">
         @csrf
         @method('put')
         <div class="container pb-2">

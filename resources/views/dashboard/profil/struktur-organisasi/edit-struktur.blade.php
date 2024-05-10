@@ -17,11 +17,16 @@
                     </ol>
                 </div>
             </div>
+
+            <div class="flex justify-between items-center mb-1 mt-3">
+                <a href="{{ route('struktur') }}">
+                    <x-blue-button type="submit" class="btn btn-secondary">Kembali</x-blue-button>
+                </a>
+            </div>
         </div>
     </x-slot>
 
-    <form id="update-sejarah" method="post" action="{{ route('update-struktur') }}"
-        enctype="multipart/form-data">
+    <form id="update-struktur" method="post" action="{{ route('update-struktur') }}" enctype="multipart/form-data">
         @csrf
         @method('put')
         <div class="container pb-2">
@@ -38,7 +43,8 @@
                         <div class="col-md-6">
 
                             <div class="flex justify-center">
-                                <img id="image-preview" src="{{ $data->image_path ? asset('storage/' . $data->image_path) : asset('assets/img/image-preview.jpg') }}"
+                                <img id="image-preview"
+                                    src="{{ $data->image_path ? asset('storage/' . $data->image_path) : asset('assets/img/image-preview.jpg') }}"
                                     alt="preview image" style="max-height: 250px;">
                             </div>
 

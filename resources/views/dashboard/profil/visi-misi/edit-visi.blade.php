@@ -12,10 +12,15 @@
                             <i class="nav-icon fas fa-house ml-1"></i>
                             Halaman Utama
                         </li>
-                        <li class="breadcrumb-item"><a href="{{ route('sejarah') }}">Visi-Misi</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('edit-sejarah') }}">Visi-Misi Edit</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('visi-misi') }}">Visi-Misi</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('edit-visi-misi') }}">Visi-Misi Edit</a></li>
                     </ol>
                 </div>
+            </div>
+            <div class="flex justify-between items-center mb-1 mt-3">
+                <a href="{{ route('visi-misi') }}">
+                    <x-blue-button type="submit" class="btn btn-secondary">Kembali</x-blue-button>
+                </a>
             </div>
         </div>
     </x-slot>

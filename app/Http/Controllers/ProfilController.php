@@ -30,8 +30,8 @@ class ProfilController extends Controller
         $data = Profil::findOrFail(1);
 
         $validatedData = $request->validate([
-            'image_path' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-            'body' => 'required',
+            'image_path' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'body' => 'nullable',
         ]);
 
         try {
@@ -43,6 +43,8 @@ class ProfilController extends Controller
                 $uniqueFileName = $request->file('image_path')->hashName();
                 $request->file('image_path')->storeAs('public/ProfilImage', $uniqueFileName);
                 $validatedData['image_path'] = 'profilimage/' . $uniqueFileName;
+            } else {
+                $validatedData['image_path'] = $data->image_path;
             }
 
             // Update sejarah

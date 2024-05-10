@@ -17,6 +17,11 @@
                     </ol>
                 </div>
             </div>
+            <div class="flex justify-between items-center mb-1 mt-3">
+                <a href="{{ route('manajemen') }}">
+                    <x-blue-button type="submit" class="btn btn-secondary">Kembali</x-blue-button>
+                </a>
+            </div>
         </div>
     </x-slot>
 
@@ -88,8 +93,6 @@
     </form>
 
     @push('scripts')
-    <!-- Summernote -->
-    <script src="{{ asset('assets/plugins/summernote/summernote-bs5.min.js') }}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const imageInput = document.querySelector('#image');
@@ -106,20 +109,6 @@
                 if (file) {
                     reader.readAsDataURL(file);
                 }
-            });
-
-            // Initialize Summernote
-            $('#summernote').summernote({
-                toolbar: [
-                    ['style', ['style']],
-                    ['font', ['bold', 'underline', 'italic', 'clear']],
-                    ['fontname', ['fontname']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['table', ['table']],
-                    ['insert', ['link']],
-                    ['view', ['fullscreen', 'codeview', 'help']],
-                ],
             });
         });
     </script>

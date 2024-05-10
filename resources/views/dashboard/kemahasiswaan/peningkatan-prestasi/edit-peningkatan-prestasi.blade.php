@@ -18,6 +18,11 @@
                     </ol>
                 </div>
             </div>
+            <div class="flex justify-between items-center mb-1 mt-3">
+                <a href="{{ route('peningkatan-prestasi') }}">
+                    <x-blue-button type="submit" class="btn btn-secondary">Kembali</x-blue-button>
+                </a>
+            </div>
         </div>
     </x-slot>
 
