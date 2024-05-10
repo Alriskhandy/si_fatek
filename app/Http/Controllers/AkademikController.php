@@ -38,10 +38,12 @@ class AkademikController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('departemen')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('departemen');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('departemen')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('departemen')->with('message', $e->getMessage());
         }
     }
 
@@ -74,10 +76,12 @@ class AkademikController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('magister')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('magister');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('magister')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('magister')->with('message', $e->getMessage());
         }
     }
 
@@ -110,10 +114,12 @@ class AkademikController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('doktor')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('doktor');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('doktor')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('doktor')->with('message', $e->getMessage());
         }
     }
 
@@ -145,10 +151,12 @@ class AkademikController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('profesi')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('profesi');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('profesi')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('profesi')->with('message', $e->getMessage());
         }
     }
 
@@ -180,10 +188,12 @@ class AkademikController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('kalender')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('kalender');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('kalender')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('kalender')->with('message', $e->getMessage());
         }
     }
 }

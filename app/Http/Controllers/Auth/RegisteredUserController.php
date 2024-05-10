@@ -42,6 +42,7 @@ class RegisteredUserController extends Controller
         ]);
 
         event(new Registered($user));
+        toastr()->success('User telah berhasil ditambahkan.');
 
         return redirect(route('kelola-pengguna', absolute: false));
     }

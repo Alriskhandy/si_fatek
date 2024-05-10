@@ -34,9 +34,11 @@ class AkreditasiController extends Controller
             // Buat data kerjasama baru
             Akreditasi::create($validatedData);
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('akreditasi')->with('status', 'created-success');
+            toastr()->success('Data telah berhasil ditambahkan.');
+            return redirect()->route('akreditasi');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
+            toastr()->error('Terjadi Kesalahan.');
             return redirect()->route('akreditasi')->with('status', 'error')->with('message', $e->getMessage());
         }
     }
@@ -48,10 +50,11 @@ class AkreditasiController extends Controller
             $data->delete();
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('akreditasi')->with('status', 'deleted-success');
+            toastr()->success('Data telah berhasil dihapus.');
+            return redirect()->route('akreditasi');
         } catch (\Exception $e) {
-            // Tangani kesalahan jika terjadi
-            return redirect()->route('akreditasi')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('akreditasi')->with('message', $e->getMessage());
         }
     }
 
@@ -74,11 +77,12 @@ class AkreditasiController extends Controller
             // Update
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
-            // Berikan pesan sukses jika berhasil
-            return redirect()->route('akreditasi')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('akreditasi');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('akreditasi')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('akreditasi')->with('message', $e->getMessage());
         }
     }
 }

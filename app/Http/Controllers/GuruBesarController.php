@@ -31,10 +31,12 @@ class GuruBesarController extends Controller
             // Buat data kerjasama baru
             GuruBesar::create($validatedData);
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('guru-besar')->with('status', 'created-success');
+            toastr()->success('Data telah berhasil ditambahkan.');
+            return redirect()->route('guru-besar');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('guru-besar')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('guru-besar')->with('message', $e->getMessage());
         }
     }
 
@@ -45,10 +47,11 @@ class GuruBesarController extends Controller
             $data->delete();
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('guru-besar')->with('status', 'deleted-success');
+            toastr()->success('Data telah berhasil dihapus.');
+            return redirect()->route('guru-besar');
         } catch (\Exception $e) {
-            // Tangani kesalahan jika terjadi
-            return redirect()->route('guru-besar')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('guru-besar')->with('message', $e->getMessage());
         }
     }
 
@@ -69,10 +72,11 @@ class GuruBesarController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('guru-besar')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('guru-besar');
         } catch (\Exception $e) {
-            // Tangani kesalahan jika terjadi
-            return redirect()->route('guru-besar')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('guru-besar')->with('message', $e->getMessage());
         }
     }
 }

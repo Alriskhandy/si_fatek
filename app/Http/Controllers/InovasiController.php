@@ -27,10 +27,12 @@ class InovasiController extends Controller
         try {
             Inovasi::create($validatedData);
 
-            return redirect()->route('inovasi')->with('status', 'created-success');
+            toastr()->success('Data telah berhasil ditambahkan.');
+            return redirect()->route('inovasi');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('inovasi')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('inovasi')->with('message', $e->getMessage());
         }
     }
 
@@ -41,10 +43,12 @@ class InovasiController extends Controller
             $data->delete();
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('inovasi')->with('status', 'deleted-success');
+            toastr()->success('Data telah berhasil dihapus.');
+            return redirect()->route('inovasi');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('inovasi')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('inovasi')->with('message', $e->getMessage());
         }
     }
 
@@ -63,10 +67,12 @@ class InovasiController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('inovasi')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil dihapus.');
+            return redirect()->route('inovasi');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('inovasi')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('inovasi')->with('message', $e->getMessage());
         }
     }
 }

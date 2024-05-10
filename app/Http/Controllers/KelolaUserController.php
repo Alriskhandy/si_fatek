@@ -10,8 +10,7 @@ class KelolaUserController extends Controller
 {
     public function show()
     {
-        return view('dashboard.kelola-pengguna.main', [
-            'data' => User::where('id', '!=', 1)->get()
-        ]);
+        $data = User::where('id', '!=', 1)->get();
+        return view('dashboard.kelola-pengguna.main')->with(compact('data'));
     }
 }

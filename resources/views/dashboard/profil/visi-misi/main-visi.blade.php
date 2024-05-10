@@ -34,8 +34,7 @@
                     @if ($data->body != null)
                     {!! $data->body !!}
                     @else
-                    <img class="mx-auto rounded-md"
-                        src="{{ asset('assets/img/no-data.png') }}" alt=""
+                    <img class="mx-auto rounded-md" src="{{ asset('assets/img/no-data.png') }}" alt=""
                         style="max-height: 25rem;">
                     <p class="text-center">Belum terdapat data, Klik tombol tambah</p>
                     @endif
@@ -43,25 +42,4 @@
             </div>
         </div>
     </div>
-
-    @if (session('status') === 'success')
-    @push('scripts')
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: 'top-end',
-                    showConfirmButton: false,
-                    timer: 3000,
-                });
-
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Artikel berhasil diubah.'
-                });
-            });
-    </script>
-    @endpush
-    @endif
-
 </x-dashboard-layout>

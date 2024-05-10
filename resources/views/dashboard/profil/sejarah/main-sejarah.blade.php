@@ -48,25 +48,4 @@
             </div>
         </div>
     </div>
-
-    @if (session('status') === 'success')
-    @push('scripts')
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: 'top-end',
-                    showConfirmButton: false,
-                    timer: 3000,
-                });
-
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Artikel berhasil diubah.'
-                });
-            });
-    </script>
-    @endpush
-    @endif
-
 </x-dashboard-layout>

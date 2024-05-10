@@ -30,10 +30,12 @@ class PenelitianController extends Controller
         try {
             Penelitian::create($validatedData);
 
-            return redirect()->route('daftar-penelitian')->with('status', 'created-success');
+            toastr()->success('Data telah berhasil ditambahkan.');
+            return redirect()->route('daftar-penelitian');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('daftar-penelitian')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('daftar-penelitian')->with('message', $e->getMessage());
         }
     }
 
@@ -44,10 +46,12 @@ class PenelitianController extends Controller
             $data->delete();
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('daftar-penelitian')->with('status', 'deleted-success');
+            toastr()->success('Data telah berhasil dihapus.');
+            return redirect()->route('daftar-penelitian');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('daftar-penelitian')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('daftar-penelitian')->with('message', $e->getMessage());
         }
     }
 
@@ -69,10 +73,12 @@ class PenelitianController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('daftar-penelitian')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('daftar-penelitian');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('daftar-penelitian')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('daftar-penelitian')->with('message', $e->getMessage());
         }
     }
 }

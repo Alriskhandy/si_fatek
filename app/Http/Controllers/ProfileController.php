@@ -39,10 +39,12 @@ class ProfileController extends Controller
             }
 
             $user->update($validatedData);
-            return redirect()->route('edit-profil')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('edit-profil');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('edit-profil')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('edit-profil')->with('message', $e->getMessage());
         }
     }
 }

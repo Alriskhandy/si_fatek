@@ -52,7 +52,7 @@ class GPMController extends Controller
         $post->update([
             'body' => $body
         ]);
-
+        toastr()->success('Data telah berhasil diubah.');
         return redirect()->route('gpm-pr');
     }
 
@@ -82,7 +82,7 @@ class GPMController extends Controller
 
         // Hapus kolom body
         $data->update(['body' => null]);
-
+        toastr()->success('Data telah berhasil dihapus.');
         return redirect()->route('gpm-pr');
     }
 }

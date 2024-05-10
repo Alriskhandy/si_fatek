@@ -36,10 +36,12 @@ class KekayaanIntelektualController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('hak-kekayaan-intelektual')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('hak-kekayaan-intelektual');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('hak-kekayaan-intelektual')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('hak-kekayaan-intelektual')->with('message', $e->getMessage());
         }
     }
 }

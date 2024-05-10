@@ -67,32 +67,4 @@
             </div>
         </div>
     </form>
-
-    @push('scripts')
-    <script>
-        import Swal from 'sweetalert2';
-        $(document).ready(function () {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-            });
-    
-            document.addEventListener('DOMContentLoaded', function () {
-                @if (session('status') === 'updated-success')
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Data Berhasil Di Update Ke Database'
-                });
-                @else
-                Toast.fire({
-                    icon: 'error',
-                    title: 'Terjadi kesalahan pada server.'
-                });
-                @endif
-            });
-        });
-    </script>
-    @endpush
 </x-dashboard-layout>

@@ -109,41 +109,4 @@
             <!-- /.card-body -->
         </div>
     </div>
-
-    @push('scripts')
-    <script>
-        $(document).ready(function () {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-            });
-    
-            document.addEventListener('DOMContentLoaded', function () {
-                @if (session('status') === 'created-success')
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Artikel berhasil ditambahkan.'
-                });
-                @elseif (session('status') === 'updated-success')
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Artikel berhasil diubah.'
-                });
-                @elseif (session('status') === 'deleted-success')
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Artikel berhasil dihapus.'
-                });
-                @else
-                Toast.fire({
-                    icon: 'error',
-                    title: 'Terjadi kesalahan pada server.'
-                });
-                @endif
-            });
-        });
-    </script>
-    @endpush
 </x-dashboard-layout>

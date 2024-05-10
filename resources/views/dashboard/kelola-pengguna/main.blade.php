@@ -92,7 +92,7 @@
                 </h2>
             </div>
             <div class="card-body">
-                @if(isset($user) && count($user) > 0)
+                @if(isset($data) && count($data) > 0)
                 <div class="overflow-x-auto">
                     <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
                         <thead class="ltr:text-left rtl:text-right">

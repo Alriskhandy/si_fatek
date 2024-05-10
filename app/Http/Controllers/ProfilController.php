@@ -49,10 +49,12 @@ class ProfilController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('sejarah')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('sejarah');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('sejarah')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('sejarah')->with('message', $e->getMessage());
         }
     }
 
@@ -84,10 +86,12 @@ class ProfilController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('visi-misi')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('visi-misi');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('visi-misi')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('visi-misi')->with('message', $e->getMessage());
         }
     }
 
@@ -130,10 +134,12 @@ class ProfilController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('struktur')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('struktur');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('struktur')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('struktur')->with('message', $e->getMessage());
         }
     }
 
@@ -175,10 +181,12 @@ class ProfilController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('manajemen')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('manajemen');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('manajemen')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('manajemen')->with('message', $e->getMessage());
         }
     }
 
@@ -213,10 +221,12 @@ class ProfilController extends Controller
             $data->update($validatedData + ['updated_at' => now('Asia/Jayapura')]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('master-plan')->with('status', 'updated-success');
+            toastr()->success('Data telah berhasil diubah.');
+            return redirect()->route('master-plan');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('master-plan')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('master-plan')->with('message', $e->getMessage());
         }
     }
 
@@ -233,10 +243,12 @@ class ProfilController extends Controller
             $data->update(['image_path' => null]);
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('master-plan')->with('status', 'deleted-success');
+            toastr()->success('Data telah berhasil dihapus.');
+            return redirect()->route('master-plan');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('master-plan')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('master-plan')->with('message', $e->getMessage());
         }
     }
 }

@@ -34,10 +34,12 @@ class GaleriController extends Controller
 
             Galeri::create($validatedData);
 
-            return redirect()->route('galeri')->with('status', 'created-success');
+            toastr()->success('Data telah berhasil ditambahkan.');
+            return redirect()->route('galeri');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('galeri')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('galeri')->with('message', $e->getMessage());
         }
     }
 
@@ -52,10 +54,12 @@ class GaleriController extends Controller
             $data->delete();
 
             // Berikan pesan sukses jika berhasil
-            return redirect()->route('galeri')->with('status', 'deleted-success');
+            toastr()->success('Data telah berhasil dihapus.');
+            return redirect()->route('galeri');
         } catch (\Exception $e) {
             // Tangani kesalahan jika terjadi
-            return redirect()->route('galeri')->with('status', 'error')->with('message', $e->getMessage());
+            toastr()->error('Terjadi Kesalahan.');
+            return redirect()->route('galeri')->with('message', $e->getMessage());
         }
     }
 }
