@@ -22,11 +22,14 @@
                                                 <h3 class="text-white mb-0">Alumni</h3>
                                             </div>
                                         </div>
-                                        <div class="card-body p-5 pt-0">
-                                            {{-- Content --}}
+                                        <div class="card-body p-5 pt-0 my-5">
+                                            @if($data->body != null)
+                                            <p>{!! $data->body !!}</p>
+                                            @else
                                             <div class="text dark mt-6">
                                                 <h2>Not Found!</h2>
                                             </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

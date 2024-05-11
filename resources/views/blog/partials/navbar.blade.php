@@ -78,6 +78,7 @@
                   Kemahasiswaan
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/asrama">UPT Asrama</a></li>
                   <li><a class="dropdown-item" href="/pengembangan-karakter-mahasiswa">Pengembangan Karakter
                       Mahasiswa</a></li>
                   <li><a class="dropdown-item" href="/peningkatan-prestasi-mahasiswa">Peningkatan Prestasi Mahasiswa</a>
@@ -119,12 +120,12 @@
                   GPM-PR
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/understructure">Profile GPM-PR</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Dokumen Mutu</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Audit Mutu Akademik Internal</a></li>
-                  <li><a class="dropdown-item" href="/understructure">LAM TEKNIK</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Laporan Kepuasan Pengguna</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Survei Kepuasan Layanan Mahsiswa</a></li>
+                  <li><a class="dropdown-item" href="/profil-gpm-pr">Profile GPM-PR</a></li>
+                  <li><a class="dropdown-item" href="/dokumen-mutu">Dokumen Mutu</a></li>
+                  <li><a class="dropdown-item" href="/audit-mutu">Audit Mutu Akademik Internal</a></li>
+                  <li><a class="dropdown-item" href="/lam-teknik">LAM Teknik</a></li>
+                  <li><a class="dropdown-item" href="/laporan-kepuasan-pengguna">Laporan Kepuasan Pengguna</a></li>
+                  <li><a class="dropdown-item" href="/survei-kepuasan-layanan">Survei Kepuasan Layanan Mahsiswa</a></li>
                   <li><a class="dropdown-item" href="/understructure">Galeri</a></li>
                 </ul>
               </li>

@@ -22,10 +22,46 @@
                                                 <h3 class="text-white mb-0">Hasil Inovasi</h3>
                                             </div>
                                         </div>
-                                        <div class="card-body p-5 pt-0">
-                                            {{-- Content --}}
-                                            <div class="text dark mt-6">
-                                                <h2>Not Found!</h2>
+                                        <div class="card-body p-2 pt-0 my-5">
+                                            <div class="col-lg-8 col-md-10 mx-auto">
+                                                @if(isset($data) && count($data) > 0)
+                                                <div class="overflow-x-auto table-responsive">
+                                                    <table
+                                                        class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                                                        <thead class="ltr:text-left rtl:text-right">
+                                                            <tr>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    No</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Nama Inovasi</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Inovator</th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody class="divide-y divide-gray-200">
+                                                            @foreach ($data as $a)
+                                                            <tr class="odd:bg-gray-50">
+                                                                <td
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    {{ $loop->iteration }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{ $a->nama_inovasi }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{ $a->inovator }}</td>
+                                                            </tr>
+                                                            @endforeach
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                @else
+                                                <div class="text dark mt-6">
+                                                    <h2>Not Found!</h2>
+                                                </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>

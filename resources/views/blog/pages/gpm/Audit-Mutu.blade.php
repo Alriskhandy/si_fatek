@@ -19,7 +19,8 @@
                                         <div
                                             class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
                                             <div class="bg-gradient-info shadow-dark border-radius-lg p-4">
-                                                <h3 class="text-white mb-0">Hak Kekayaan Intelektual</h3>
+                                                <h3 class="text-white mb-0">Audit Mutu Akademik Internal Fakultas Teknik
+                                                    Unkhair</h3>
                                             </div>
                                         </div>
                                         <div class="card-body p-5 pt-0 my-5">

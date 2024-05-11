@@ -22,10 +22,15 @@
                                                 <h3 class="text-white mb-0">Kalender Akademik</h3>
                                             </div>
                                         </div>
-                                        <div class="card-body p-5 pt-0">
-                                            {{-- Content --}}
-                                            <div class="text dark mt-6">
-                                                <h2>Not Found!</h2>
+                                        <div class="card-body p-5 pt-0 my-5">
+                                            <div class="col-md-10 mx-auto">
+                                                @if($data->body != null)
+                                                <p>{!! $data->body !!}</p>
+                                                @else
+                                                <div class="text dark mt-6">
+                                                    <h2>Not Found!</h2>
+                                                </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>

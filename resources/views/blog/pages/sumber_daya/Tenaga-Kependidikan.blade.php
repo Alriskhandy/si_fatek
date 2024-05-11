@@ -22,11 +22,55 @@
                                                 <h3 class="text-white mb-0">Tenaga Kependidikan</h3>
                                             </div>
                                         </div>
-                                        <div class="card-body p-5 pt-0">
-                                            {{-- Content --}}
+                                        <div class="card-body p-2 pt-0 my-5">
+                                            @if(isset($data) && count($data) > 0)
+                                            <div class="overflow-x-auto mx-auto table-responsive">
+                                                <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                                                    <thead class="ltr:text-left rtl:text-right">
+                                                        <tr>
+                                                            <th
+                                                                class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                No</th>
+                                                            <th
+                                                                class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                Nama</th>
+                                                            <th
+                                                                class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                Departemen</th>
+                                                            <th
+                                                                class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                Nip</th>
+                                                            <th
+                                                                class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                Golongan</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody class="divide-y divide-gray-200">
+                                                        @foreach ($data as $a)
+                                                        <tr class="odd:bg-gray-50">
+                                                            <td
+                                                                class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                {{ $loop->iteration }}</td>
+                                                            <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                {{ $a->nama }}</td>
+                                                            <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                {{ $a->jabatan }}</td>
+                                                            <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                {{ $a->nip }}</td>
+                                                            <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                {{ $a->golongan }}</td>
+                                                        </tr>
+                                                        @endforeach
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                            @else
                                             <div class="text dark mt-6">
                                                 <h2>Not Found!</h2>
                                             </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

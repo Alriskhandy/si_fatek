@@ -22,10 +22,75 @@
                                                 <h3 class="text-white mb-0">Akreditasi</h3>
                                             </div>
                                         </div>
-                                        <div class="card-body p-5 pt-0">
-                                            {{-- Content --}}
-                                            <div class="text dark mt-6">
-                                                <h2>Not Found!</h2>
+                                        <div class="card-body p-1 pt-0 my-5">
+                                            <div class="mx-auto">
+                                                @if(isset($data) && count($data) > 0)
+                                                <div class="overflow-x-auto table-responsive">
+                                                    <table
+                                                        class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                                                        <thead class="ltr:text-left rtl:text-right">
+                                                            <tr>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    No</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Jenis Program</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Nama Program Studi</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Status / Peringkat</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Akreditasi Nasional No. dan Tgl. SK</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Tgl. Berakhir</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Akreditasi Internasional</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Tgl. Berakhir Akreditasi Internasional</th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody class="divide-y divide-gray-200">
+                                                            @foreach ($data as $a)
+                                                            <tr class="odd:bg-gray-50">
+                                                                <td
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    {{ $loop->iteration }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{ $a->jenis }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{ $a->nama_prodi }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{ $a->peringkat }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{ $a->akreditasi_nas }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{
+                                                                    \Carbon\Carbon::parse($a->tgl_exp_akreditasi_nas)->format('d/m/Y')
+                                                                    }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{ $a->akreditasi_inter }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{
+                                                                    \Carbon\Carbon::parse($a->tgl_exp_akreditasi_inter)->format('d/m/Y')
+                                                                    }}</td>
+                                                            </tr>
+                                                            @endforeach
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                @else
+                                                <div class="text dark mt-6">
+                                                    <h2>Not Found!</h2>
+                                                </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>

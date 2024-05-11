@@ -22,10 +22,62 @@
                                                 <h3 class="text-white mb-0">Kerjasama Dalam Negeri</h3>
                                             </div>
                                         </div>
-                                        <div class="card-body p-5 pt-0">
-                                            {{-- Content --}}
-                                            <div class="text dark mt-6">
-                                                <h2>Not Found!</h2>
+                                        <div class="card-body p-2 pt-0 my-5">
+                                            <div class="col-lg-10 mx-auto">
+                                                @if(isset($data) && count($data) > 0)
+                                                <div class="overflow-x-auto table-responsive">
+                                                    <table
+                                                        class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                                                        <thead class="ltr:text-left rtl:text-right">
+                                                            <tr>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Kerjasama</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    No</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Mitra</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Kegiatan</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Ketua Tim</th>
+                                                                <th
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    Departemen</th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody class="divide-y divide-gray-200">
+                                                            @foreach ($data as $a)
+                                                            <tr class="odd:bg-gray-50">
+                                                                <td
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    {{ $a->kerjasama }}</td>
+                                                                <td
+                                                                    class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                                                    {{ $loop->iteration }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{ $a->mitra }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{ $a->kegiatan }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{ $a->ketua_tim }}</td>
+                                                                <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                                                                    {{ $a->departemen }}</td>
+                                                            </tr>
+                                                            @endforeach
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                @else
+                                                <div class="text dark mt-6">
+                                                    <h2>Not Found!</h2>
+                                                </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>

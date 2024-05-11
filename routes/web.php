@@ -39,73 +39,42 @@ Route::prefix('/')->group(function () {
         return view('blog.pages.profile.Peta-Fakultas');
     });
 
-    // AKREDITASI
-    Route::get('/akreditasi', function () {
-        return view('blog.pages.akademik.Akreditasi');
-    });
-    Route::get('/departemen', function () {
-        return view('blog.pages.akademik.Departemen');
-    });
-    Route::get('/kalender-akademik', function () {
-        return view('blog.pages.akademik.Kalender-Akademik');
-    });
-    Route::get('/program-doktor', function () {
-        return view('blog.pages.akademik.Program-Doktor');
-    });
-    Route::get('/program-magister', function () {
-        return view('blog.pages.akademik.Program-Magister');
-    });
-    Route::get('/program-profesi', function () {
-        return view('blog.pages.akademik.Program-Profesi');
-    });
+    // AKADEMIK
+    Route::get('/departemen', [PagesController::class, 'departemen']);
+    Route::get('/program-magister', [PagesController::class, 'magister']);
+    Route::get('/program-doktor', [PagesController::class, 'doktor']);
+    Route::get('/program-profesi', [PagesController::class, 'profesi']);
+    Route::get('/kalender-akademik', [PagesController::class, 'kalender']);
+    Route::get('/akreditasi', [PagesController::class, 'akreditasi']);
 
     // SUMBERDAYA
-    Route::get('/guru-besar', function () {
-        return view('blog.pages.sumber_daya.Guru-Besar');
-    });
-    Route::get('/tenaga-kependidikan', function () {
-        return view('blog.pages.sumber_daya.Tenaga-Kependidikan');
-    });
+    Route::get('/guru-besar', [PagesController::class, 'guruBesar']);
+    Route::get('/tenaga-kependidikan', [PagesController::class, 'tenagaPendidik']);
 
     // KEMAHASISWAAN
-    Route::get('/alumni', function () {
-        return view('blog.pages.kemahasiswaan.Alumni');
-    });
-    Route::get('/aturan-kemahasiswaan', function () {
-        return view('blog.pages.kemahasiswaan.Aturan-Kemahasiswaan');
-    });
-    Route::get('/mahasiswa-inbound-outbound', function () {
-        return view('blog.pages.kemahasiswaan.MHS-Inbound-Outbound');
-    });
-    Route::get('/pengembangan-karakter-mahasiswa', function () {
-        return view('blog.pages.kemahasiswaan.Pengembangan-Karakter-MHS');
-    });
-    Route::get('/pengumuman', function () {
-        return view('blog.pages.kemahasiswaan.Pengumuman');
-    });
-    Route::get('/peningkatan-prestasi-mahasiswa', function () {
-        return view('blog.pages.kemahasiswaan.Peningkatan-Prestasi-MHS');
-    });
+    Route::get('/asrama', [PagesController::class, 'asrama']);
+    Route::get('/pengembangan-karakter-mahasiswa', [PagesController::class, 'pengembanganKarakter']);
+    Route::get('/peningkatan-prestasi-mahasiswa', [PagesController::class, 'peningkatanPrestasi']);
+    Route::get('/alumni', [PagesController::class, 'alumni']);
+    Route::get('/aturan-kemahasiswaan', [PagesController::class, 'aturan']);
 
     //  RISET & INOVASI
-    Route::get('/daftar-penelitian-lbe', function () {
-        return view('blog.pages.riset_inovasi.Daftar-Penelitian-LBE');
-    });
-    Route::get('/hasil-inovasi', function () {
-        return view('blog.pages.riset_inovasi.Hasil-Inovasi');
-    });
-    Route::get('/hak-kekayaan-intelektual', function () {
-        return view('blog.pages.riset_inovasi.Hak-Kekayaan-Intelektual');
-    });
+    Route::get('/daftar-penelitian-lbe', [PagesController::class, 'daftarPenelitian']);
+    Route::get('/hasil-inovasi', [PagesController::class, 'hasilInovasi']);
+    Route::get('/hak-kekayaan-intelektual', [PagesController::class, 'kekayaanIntelektual']);
 
     // KEMITRAAN
-    Route::get('/kerjasama-dalam-negeri', function () {
-        return view('blog.pages.kemitraan.Kerjasama-Dalam-Negeri');
-    });
-    Route::get('/kerjasama-luar-negeri', function () {
-        return view('blog.pages.kemitraan.Kerjasama-Luar-Negeri');
-    });
+    Route::get('/kerjasama-dalam-negeri', [PagesController::class, 'kerjasamaDN']);
+    Route::get('/kerjasama-luar-negeri', [PagesController::class, 'kerjasamaLN']);
 
+    // GPM-PR & Galeri
+    Route::get('/profil-gpm-pr', [PagesController::class, 'profilGPM']);
+    Route::get('/dokumen-mutu', [PagesController::class, 'dokumenMutu']);
+    Route::get('/audit-mutu', [PagesController::class, 'auditMutu']);
+    Route::get('/lam-teknik', [PagesController::class, 'lamTeknik']);
+    Route::get('/laporan-kepuasan-pengguna', [PagesController::class, 'laporanKepuasan']);
+    Route::get('/survei-kepuasan-layanan', [PagesController::class, 'surveiKepuasan']);
+    Route::get('/galeri', [PagesController::class, 'galeri']);
 
     // DETAIL BERITA
     Route::get('/judul-berita', function () {
