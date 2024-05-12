@@ -126,7 +126,7 @@
                   <li><a class="dropdown-item" href="/lam-teknik">LAM Teknik</a></li>
                   <li><a class="dropdown-item" href="/laporan-kepuasan-pengguna">Laporan Kepuasan Pengguna</a></li>
                   <li><a class="dropdown-item" href="/survei-kepuasan-layanan">Survei Kepuasan Layanan Mahsiswa</a></li>
-                  <li><a class="dropdown-item" href="/understructure">Galeri</a></li>
+                  <li><a class="dropdown-item" href="/galeri">Galeri</a></li>
                 </ul>
               </li>
             </ul>

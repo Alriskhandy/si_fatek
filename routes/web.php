@@ -27,9 +27,7 @@ Route::get('/', function () {
 // BLOG PAGES
 Route::prefix('/')->group(function () {
     // PROFIL
-    Route::get('/berita', function () {
-        return view('blog.pages.profile.Berita');
-    });
+    Route::get('/berita', [PagesController::class, 'berita']);
     Route::get('/sejarah-singkat', [PagesController::class, 'sejarah']);
     Route::get('/visi-misi-dan-sasaran', [PagesController::class, 'visiMisi']);
     Route::get('/struktur-organisasi', [PagesController::class, 'struktur']);

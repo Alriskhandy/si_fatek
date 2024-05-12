@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Akademik;
 use App\Models\Akreditasi;
+use App\Models\Berita;
 use App\Models\Galeri;
 use App\Models\GPM;
 use App\Models\GuruBesar;
@@ -26,6 +27,17 @@ class PagesController extends Controller
     }
 
     // PROFIL -BERITA
+    public function berita()
+    {
+        $data = Berita::orderBy('created_at', 'desc');
+
+        $panels = $data->take(3)->get();
+
+        $berita = $data->skip(3)->paginate(10);
+
+        // dd($panels);
+        return view('blog.pages.profile.Berita')->with(compact('berita', 'panels'));
+    }
     public function sejarah()
     {
         $data = Profil::findOrFail(1);
@@ -184,9 +196,9 @@ class PagesController extends Controller
         $data = GPM::findOrFail(6);
         return view('blog.pages.gpm.Survei-Kepuasan')->with(compact('data'));
     }
-    // public function galeri()
-    // {
-    //     $data = Galeri::all();
-    //     return view('blog.pages.kemitraan.Kerjasama-Dalam-Negeri')->with(compact('data'));
-    // }
+    public function galeri()
+    {
+        $data = Galeri::all();
+        return view('blog.pages.gpm.Galeri')->with(compact('data'));
+    }
 }
