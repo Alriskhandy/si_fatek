@@ -10,7 +10,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        @include('blog.components.breadcrumbs')
+                        <div class="container py-3">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+                                    <li class="breadcrumb-item">Akademik</li>
+                                    <li class="breadcrumb-item"><a href="/progarm-profesi">Program Profesi</a></li>
+                                </ol>
+                            </nav>
+                        </div>
 
                         <section class="pt-md-2 pb-md-5 pt-lg-5 mt-3 mt-md-4 mt-lg-0">
                             <div class="container">

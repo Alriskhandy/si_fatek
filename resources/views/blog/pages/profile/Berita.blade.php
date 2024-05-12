@@ -10,7 +10,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        @include('blog.components.breadcrumbs')
+                        <div class="container py-3">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+                                    <li class="breadcrumb-item">Profil</li>
+                                    <li class="breadcrumb-item"><a href="/berita">Berita</a></li>
+                                </ol>
+                            </nav>
+                        </div>
 
                         {{-- Hero Panel-3 beria terbaru --}}
                         <section>
@@ -75,7 +83,8 @@
                                                     <h4>
                                                         <a href="/judul-berita" class="text-dark">{{ $b->title }}</a>
                                                     </h4>
-                                                    <p class="text-justify">{{ $b->excerpt }}<a href="/judul-berita" class="text-info"> Read
+                                                    <p class="text-justify">{{ $b->excerpt }}<a href="/judul-berita"
+                                                            class="text-info"> Read
                                                             More
                                                         </a>
                                                     </p>

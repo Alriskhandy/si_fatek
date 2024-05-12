@@ -13,7 +13,16 @@
                         <h3>Peta Fakultas</h3>
                     </div>
 
-                    @include('blog/components/breadcrumbs')
+                    <div class="container py-3">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+                                <li class="breadcrumb-item">Profil</li>
+                                <li class="breadcrumb-item"><a href="/peta-fakultas">Peta Fakultas</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+
                     <div class="card shadow-lg mt-4">
                         <div class="card-body p-1 pt-0 text-center">
                             <div class="ratio ratio-16x9 mx-auto my-5" style="max-width: 90%">

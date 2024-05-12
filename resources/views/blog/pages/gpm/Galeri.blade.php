@@ -10,7 +10,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        @include('blog.components.breadcrumbs')
+                        <div class="container py-3">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+                                    <li class="breadcrumb-item">GPM-PR</li>
+                                    <li class="breadcrumb-item"><a href="/galeri">Galeri</a></li>
+                                </ol>
+                            </nav>
+                        </div>
 
                         <section class="pt-md-2 pb-md-5 pt-lg-5 mt-3 mt-md-4 mt-lg-0">
                             <div class="container">
@@ -22,7 +30,8 @@
                                                 <h3 class="text-white mb-0">Galeri</h3>
                                             </div>
                                         </div>
-                                        <div class="card-body p-2 p-sm-3 p-md-4 p-lg-5 pt-0 my-2 my-sm-3 my-md-4 my-lg-5">
+                                        <div
+                                            class="card-body p-2 p-sm-3 p-md-4 p-lg-5 pt-0 my-2 my-sm-3 my-md-4 my-lg-5">
                                             @if(isset($data) && count($data) > 0)
                                             <div id="carouselExampleControls" class="carousel slide"
                                                 data-bs-ride="carousel">
