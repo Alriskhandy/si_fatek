@@ -20,7 +20,7 @@
                             </nav>
                         </div>
 
-                        {{-- Hero Panel-3 beria terbaru --}}
+                        @if (count($berita)>0)
                         <section>
                             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
@@ -35,7 +35,8 @@
                                                         <h1 class="text-white fadeIn2 fadeInBottom">{{ $p->title }}</h1>
                                                         <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">{{
                                                             $p->excerpt }}</p>
-                                                        <a href="{{ route('blog.detail-berita', $p->slug) }}" class="text-light icon-move-right">
+                                                        <a href="{{ route('blog.detail-berita', $p->slug) }}"
+                                                            class="text-light icon-move-right">
                                                             Read More
                                                             <i class="fas fa-arrow-right text-sm ms-1"
                                                                 aria-hidden="true"></i>
@@ -60,7 +61,6 @@
                                 </a>
                             </div>
                         </section>
-
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-10">
@@ -81,9 +81,11 @@
                                                 </div>
                                                 <div class="col-lg-7 col-md-7 my-sm-auto mt-3 ms-sm-3">
                                                     <h4>
-                                                        <a href="{{ route('blog.detail-berita', $b->slug) }}" class="text-dark">{{ $b->title }}</a>
+                                                        <a href="{{ route('blog.detail-berita', $b->slug) }}"
+                                                            class="text-dark">{{ $b->title }}</a>
                                                     </h4>
-                                                    <p class="text-justify">{{ $b->excerpt }}<a href="{{ route('blog.detail-berita', $b->slug) }}"
+                                                    <p class="text-justify">{{ $b->excerpt }}<a
+                                                            href="{{ route('blog.detail-berita', $b->slug) }}"
                                                             class="text-info"> Read
                                                             More
                                                         </a>
@@ -103,6 +105,33 @@
                                 </div>
                             </div>
                         </div>
+                        @else
+                        <section class="pt-md-2 pb-md-5 pt-lg-5 mt-3 mt-md-4 mt-lg-0">
+                            <div class="container">
+                                <div class="col-12 mx-auto pb-5">
+                                    <div class="card shadow-lg">
+                                        <div
+                                            class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                                            <div class="bg-gradient-info shadow-dark border-radius-lg p-4">
+                                                <h3 class="text-white mb-0">Berita</h3>
+                                            </div>
+                                        </div>
+                                        <section class="py-lg-5">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-10 mx-auto">
+                                                        <div class="text text-center dark mt-6">
+                                                            <h2>Not Found!</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        @endif
                     </div>
                 </div>
             </div>

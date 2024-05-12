@@ -33,8 +33,6 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('Admin1234')
         ]);
 
-        Berita::factory(15)->create();
-
         // PROFIL FATEK
         Profil::create([
             'title' => 'sejarah'
