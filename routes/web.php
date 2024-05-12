@@ -20,7 +20,11 @@ use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\TenagaPendidikController;
 use Illuminate\Support\Facades\Route;
 
-
+Route::get('/storage-link', function () {
+    $targetFolder = base_path() . '/storage/app/public';
+    $linkFolder = $_SERVER['DOCUMENT_ROOT'] . '/storage';
+    symlink($targetFolder, $linkFolder);
+});
 
 // BLOG PAGES
 Route::prefix('/')->group(function () {
