@@ -35,7 +35,7 @@
                                                         <h1 class="text-white fadeIn2 fadeInBottom">{{ $p->title }}</h1>
                                                         <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">{{
                                                             $p->excerpt }}</p>
-                                                        <a href="/judul-berita" class="text-light icon-move-right">
+                                                        <a href="{{ route('blog.detail-berita', $p->slug) }}" class="text-light icon-move-right">
                                                             Read More
                                                             <i class="fas fa-arrow-right text-sm ms-1"
                                                                 aria-hidden="true"></i>
@@ -81,9 +81,9 @@
                                                 </div>
                                                 <div class="col-lg-7 col-md-7 my-sm-auto mt-3 ms-sm-3">
                                                     <h4>
-                                                        <a href="/judul-berita" class="text-dark">{{ $b->title }}</a>
+                                                        <a href="{{ route('blog.detail-berita', $b->slug) }}" class="text-dark">{{ $b->title }}</a>
                                                     </h4>
-                                                    <p class="text-justify">{{ $b->excerpt }}<a href="/judul-berita"
+                                                    <p class="text-justify">{{ $b->excerpt }}<a href="{{ route('blog.detail-berita', $b->slug) }}"
                                                             class="text-info"> Read
                                                             More
                                                         </a>

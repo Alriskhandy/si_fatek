@@ -3,6 +3,7 @@
 use App\Http\Controllers\AkademikController;
 use App\Http\Controllers\AkreditasiController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\GPMController;
 use App\Http\Controllers\GuruBesarController;
@@ -20,14 +21,16 @@ use App\Http\Controllers\TenagaPendidikController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('blog.index');
-});
 
 // BLOG PAGES
 Route::prefix('/')->group(function () {
+    // BERANDA
+    Route::get('/', [PagesController::class, 'index']);
+
     // PROFIL
     Route::get('/berita', [PagesController::class, 'berita']);
+    Route::get('/berita/{slug}', [PagesController::class, 'detailBerita'])->name('blog.detail-berita');
+
     Route::get('/sejarah-singkat', [PagesController::class, 'sejarah']);
     Route::get('/visi-misi-dan-sasaran', [PagesController::class, 'visiMisi']);
     Route::get('/struktur-organisasi', [PagesController::class, 'struktur']);
@@ -73,14 +76,7 @@ Route::prefix('/')->group(function () {
     Route::get('/laporan-kepuasan-pengguna', [PagesController::class, 'laporanKepuasan']);
     Route::get('/survei-kepuasan-layanan', [PagesController::class, 'surveiKepuasan']);
     Route::get('/galeri', [PagesController::class, 'galeri']);
-
-    // DETAIL BERITA
-    Route::get('/judul-berita', function () {
-        return view('blog.components.detail-berita');
-    });
 });
-
-
 
 Route::fallback(function () {
     return view('blog.notfound');
@@ -88,19 +84,14 @@ Route::fallback(function () {
 Route::get('/understructure', function () {
     return view('blog.understructure');
 });
-
-
 // Check Slug
 Route::get('/berita/checkSlug', [BeritaController::class, 'checkSlug']);
 
 // DASHBOARD
 Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function () {
-    Route::get('/', function () {
-        return view('dashboard.index');
-    })->name('dashboard');
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::prefix('/profil')->group(function () {
-
         // BERITA
         Route::get('/berita', [BeritaController::class, 'index'])->name('berita');
         Route::get('/berita/tambah', [BeritaController::class, 'create'])->name('tambah-berita');

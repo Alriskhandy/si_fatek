@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Dashboard - Sistem Informasi Fakultas Teknik</title>
+    <title>DASHBOARD - FAKULTAS TEKNIK UNIVERISTAS KHAIRUN</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"

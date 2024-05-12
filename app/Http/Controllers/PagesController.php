@@ -21,12 +21,25 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+    // BERANDA
     public function index()
     {
-        //
+        $guru = GuruBesar::all()->count();
+        if ($guru == null) {
+            $guru = 0;
+        }
+
+        $pendidik = TenagaPendidik::all()->count();
+        if ($pendidik == null) {
+            $pendidik = 0;
+        }
+
+        $berita = Berita::orderBy('created_at', 'desc')->take(3)->get();
+        // dd($guru, $pendidik);
+        return view('blog.index')->with(compact('guru', 'pendidik', 'berita'));
     }
 
-    // PROFIL -BERITA
+    // BERITA
     public function berita()
     {
         $data = Berita::orderBy('created_at', 'desc');
@@ -38,6 +51,19 @@ class PagesController extends Controller
         // dd($panels);
         return view('blog.pages.profile.Berita')->with(compact('berita', 'panels'));
     }
+    public function detailBerita($slug)
+    {
+        $post = Berita::where('slug', $slug)->firstOrFail();
+
+        $post->view = $post->view + 1;
+        $post->save();
+
+        return view('blog.components.detail-berita', [
+            'post' => $post
+        ]);
+    }
+
+    // PROFIL
     public function sejarah()
     {
         $data = Profil::findOrFail(1);
@@ -65,7 +91,7 @@ class PagesController extends Controller
     }
 
 
-    // AKADEMIK -AKREDITASI
+    // AKADEMIK
     public function departemen()
     {
         $data = Akademik::findOrFail(1);

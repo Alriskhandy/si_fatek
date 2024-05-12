@@ -1,6 +1,6 @@
 <!-- -------- START HEADER 1 w/ text and image on right ------- -->
 <header>
-  <div class="page-header min-vh-100" style="background-image: url(&#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&#39;);" loading="lazy">
+  <div class="page-header min-vh-100" style="background-image: url('{{ asset('assets/img/image-2.jpg') }}');" loading="lazy">
     <span class="mask bg-gradient-dark opacity-5"></span>
     <div class="container">
       <div class="row">
