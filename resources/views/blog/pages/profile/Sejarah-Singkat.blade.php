@@ -4,7 +4,7 @@
 @section('body')
 <!-- ======= Blog Section ======= -->
 <section id="blog" class="blog">
-    <div class="container-fluid" data-aos="fade-up">
+    <div class="container-fluid">
 
         <section class="section-page sc-about--menu my-7">
             <div class="container">
@@ -25,7 +25,7 @@
                                         <div class="card-body p-5 pt-0">
                                             <div class="card-image position-relative text-center border-radius-lg my-5">
                                                 <div class="blur-shadow-image">
-                                                    <img class="img border-radius-lg col-lg-9 col-md-7"
+                                                    <img class="img border-radius-lg max-width-350 w-100 position-relative z-index-2"
                                                         src="{{ asset('assets/blog/img/bg.jpg') }}" alt="architecture"
                                                         loading="lazy">
                                                 </div>

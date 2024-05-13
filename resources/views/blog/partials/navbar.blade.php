@@ -146,23 +146,13 @@
             <!-- nav Social Media -->
             <ul class="nav navbar-nav">
               <li class="nav-item">
-                <a class="nav-link text-dark" href="https://twitter.com/CreativeTim">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="https://www.facebook.com/CreativeTim">
+                <a class="nav-link text-dark" href="https://www.facebook.com/FatekUnkhair">
                   <i class="fab fa-facebook"></i>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-dark" href="https://www.instagram.com/CreativeTimOfficial">
+                <a class="nav-link text-dark" href="https://www.instagram.com/FatekUnkhair">
                   <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w">
-                  <i class="fab fa-youtube"></i>
                 </a>
               </li>
             </ul>

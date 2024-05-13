@@ -5,14 +5,15 @@
 <!-- ======= Blog Section ======= -->
 
 <section id="blog" class="blog">
-    <div class="container-fluid" data-aos="fade-left">
+    <div class="container-fluid">
 
         <section class="py-7 position-relative">
             <div class="row">
 
                 <div class="col-lg-12">
                     <div class="container">
-                        <div class="section-title section-title__noBottom section-title__smallFont">
+                        <div class="section-title section-title__noBottom section-title__smallFont"
+                            data-aos="fade-right" data-aos-duration="1000">
                             <h2 class="text-info">Sambutan Dekan _____</h2>
                         </div>
 
@@ -20,14 +21,16 @@
                         <div class="row">
                             <div class="col-lg-6 justify-content-center d-flex flex-column">
                                 <div class="card col-lg-9 col-md-8">
-                                    <div class="d-block blur-shadow-image ">
+                                    <div class="d-block blur-shadow-image " data-aos="fade-right"
+                                        data-aos-duration="1000">
                                         <img src="{{ asset('assets/blog/img/team-4.jpg') }}"
                                             alt="img-blur-shadow-blog-2" class="img-fluid border-radius-lg "
                                             loading="lazy">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 justify-content-center d-flex flex-column pl-lg-5 pt-lg-0 pt-3">
+                            <div class="col-lg-6 justify-content-center d-flex flex-column pl-lg-5 pt-lg-0 pt-3"
+                                data-aos="fade-left" data-aos-duration="1000">
                                 <h1 class="card-title ">
                                     <a href="#" class="text-dark">Jhon Smith ST, M.Kom</a>
                                 </h1>

@@ -6,20 +6,20 @@
 @section('body')
 <!-- ======= Blog Section ======= -->
 <section id="blog" class="blog">
-  <div class="container-fluid" data-aos="fade-up">
+  <div class="container-fluid">
 
     <div class="row">
 
       <section class="py-6 position-relative mt-5">
         <div class="col-lg-6">
-          <h2 class="mb-7 px-5 text-info">Pendidikan _________</h2>
+          <h2 class="mb-7 px-5 text-info" data-aos="fade-right" data-aos-duration="1000">Pendidikan _________</h2>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid" data-aos="fade-up" data-aos-duration="1000">
           <div class="row">
             <div class=" bg-gradient-dark">
               <div class="row py-5">
                 <div class="col-xl-4 col-md-6 px-5 position-relative">
-                  <img class="img max-width-300 w-100 position-relative z-index-2 mt-n7"
+                  <img class="img border-radius-lg max-width-300 w-100 position-relative z-index-2 mt-n7"
                     src="{{ asset('assets/blog/img/bg10.jpg') }}" loading="lazy" alt="card image">
                 </div>
                 <div class="col-xl-7 col-md-5 z-index-2 position-relative px-md-3 px-5 my-md-auto mt-4">
@@ -44,7 +44,7 @@
       </section>
 
       <section class="my-3">
-        <div class="card shadow-lg mt-n5 mx-4 mb-4">
+        <div class="card shadow-lg mt-n5 mx-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
           <div class="card-body">
             <div class="container-fluid px-0">
               <div class="row">
@@ -106,7 +106,7 @@
               <div class="container">
                 <div class="row">
                   <div class="col-lg-6 justify-content-center d-flex flex-column pl-lg-5 pt-lg-0 pt-3"
-                    data-aos="fade-right">
+                    data-aos="fade-right" data-aos-duration="1000">
                     <h2 class="category text-info mt-3">Penelitian</h2>
                     <h4 class="card-title">
                       <a href="#" class="text-dark">Warner Music Group buys concert discovery service
@@ -123,7 +123,8 @@
                       </a>
                     </p>
                   </div>
-                  <div class="col-lg-6 justify-content-center d-flex flex-column" data-aos="fade-left">
+                  <div class="col-lg-6 justify-content-center d-flex flex-column" data-aos="fade-left"
+                    data-aos-duration="1000">
                     <div class="card">
                       <div class="d-block blur-shadow-image">
                         <img src="{{ asset('assets/blog/img/bg2.jpg') }}" alt="img-blur-shadow-blog-2"
@@ -136,7 +137,8 @@
               </div>
               <div class="container">
                 <div class="row mt-5">
-                  <div class="col-lg-6 justify-content-center d-flex flex-column">
+                  <div class="col-lg-6 justify-content-center d-flex flex-column" data-aos="fade-right"
+                    data-aos-duration="1000">
                     <div class="card">
                       <div class="d-block blur-shadow-image">
                         <img src="{{ asset('assets/blog/img/bg3.jpg') }}" alt="img-blur-shadow-blog-2"
@@ -144,7 +146,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6 justify-content-center d-flex flex-column pl-lg-5 pt-lg-0 pt-3">
+                  <div class="col-lg-6 justify-content-center d-flex flex-column pl-lg-5 pt-lg-0 pt-3"
+                    data-aos="fade-left" data-aos-duration="1000">
                     <h2 class="category text-info mt-3">Pengabdian</h2>
                     <h4 class="card-title">
                       <a href="#" class="text-dark">Interesting factoids I bet you never knew about
@@ -172,13 +175,13 @@
       <section class="py-6">
         <div class="container">
           <div class="row">
-            <div class="col-9 text-center mx-auto" data-aos="fade-up">
+            <div class="col-9 text-center mx-auto" data-aos="fade-up" data-aos-duration="1000">
               <h2 class="mb-1 text-info">Berita Terbaru</h2>
               <p class="mb-6 px-md-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, inventore maiores
                 quisquam tenetur debitis nobis non.</p>
             </div>
-            <div class="col-lg-4 mb-lg-0 mb-4">
-              <div class="card">
+            <div class="col-lg-4 mb-lg-0 mb-4" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card my-4">
                 <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
                   <a href="#" class="d-block blur-shadow-image">
                     <img src="{{ asset('assets/blog/img/bg2.jpg') }}" class="img-fluid border-radius-md" alt="anastasia"
@@ -205,8 +208,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 mb-lg-0 mb-4">
-              <div class="card">
+            <div class="col-lg-4 mb-lg-0 mb-4" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card my-4">
                 <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
                   <a href="#" class="d-block blur-shadow-image">
                     <img src="{{ asset('assets/blog/img/bg3.jpg') }}" class="img-fluid border-radius-md" alt="nastuh"
@@ -234,8 +237,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 mb-lg-0 mb-4">
-              <div class="card">
+            <div class="col-lg-4 mb-lg-0 mb-4" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card my-4">
                 <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
                   <a href="#" class="d-block blur-shadow-image">
                     <img src="{{ asset('assets/blog/img/bg.jpg') }}" class="img-fluid border-radius-md" alt="annie"
@@ -268,7 +271,7 @@
       </section>
 
       <section class="pt-3 pb-4" id="count-stats">
-        <div class=" bg-gradient-dark">
+        <div class=" bg-gradient-dark" data-aos="fade-up" data-aos-duration="1000">
           <div class="container">
             <div class="row">
               <div class="col-lg-9 mx-auto py-3">

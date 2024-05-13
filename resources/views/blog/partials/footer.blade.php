@@ -11,23 +11,30 @@
         <div>
           <ul class="d-flex flex-row ms-n3 nav">
             <li class="nav-item">
-              <a class="nav-link pe-1" href="https://www.facebook.com/CreativeTim" target="_blank">
+              <a class="nav-link pe-1" href="https://www.facebook.com/FatekUnkhair" target="_blank">
                 <i class="fab fa-facebook text-lg opacity-8"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link pe-1" href="https://twitter.com/creativetim" target="_blank">
-                <i class="fab fa-twitter text-lg opacity-8"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link pe-1" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+              <a class="nav-link pe-1" href="https://www.instagram.com/FatekUnkhair" target="_blank">
                 <i class="fab fa-instagram text-lg opacity-8"></i>
               </a>
             </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6 col-6 mb-4">
+        <div>
+          <h6 class="text-sm">Kemitraan</h6>
+          <ul class="flex-column ms-n3 nav">
             <li class="nav-item">
-              <a class="nav-link pe-1" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w" target="_blank">
-                <i class="fab fa-youtube text-lg opacity-8"></i>
+              <a class="nav-link" href="/kerjasama-dalam-negeri" target="_blank">
+                Kerja Sama Dalam Negeri
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/kerjasama-luar-negeri" target="_blank">
+                Kerja Sama Luar Negeri
               </a>
             </li>
           </ul>
@@ -35,48 +42,16 @@
       </div>
       <div class="col-md-2 col-sm-6 col-6 mb-4">
         <div>
-          <h6 class="text-sm">Company</h6>
+          <h6 class="text-sm">Kemahasiswaan</h6>
           <ul class="flex-column ms-n3 nav">
             <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                About Us
+              <a class="nav-link" href="/aturan-kemahasiswaan" target="_blank">
+                Aturan Kemahasiswaan
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                Freebies
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                Premium Tools
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                Blog
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-2 col-sm-6 col-6 mb-4">
-        <div>
-          <h6 class="text-sm">Resources</h6>
-          <ul class="flex-column ms-n3 nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                Illustrations
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                Bits & Snippets
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                Affiliate Program
+              <a class="nav-link" href="/pengumuman" target="_blank">
+                Pengumuman
               </a>
             </li>
           </ul>
@@ -87,22 +62,12 @@
           <h6 class="text-sm">Help & Support</h6>
           <ul class="flex-column ms-n3 nav">
             <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                Contact Us
+              <a class="nav-link" href="/kontak" target="_blank">
+                Kontak
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                Knowledge Center
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                Custom Development
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
+              <a class="nav-link" href="/understructure" target="_blank">
                 Sponsorships
               </a>
             </li>
@@ -114,18 +79,13 @@
           <h6 class="text-sm">Legal</h6>
           <ul class="flex-column ms-n3 nav">
             <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
+              <a class="nav-link" href="/terms-conditions" target="_blank">
                 Terms & Conditions
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
+              <a class="nav-link" href="/privacy" target="_blank">
                 Privacy Policy
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                Licenses (EULA)
               </a>
             </li>
           </ul>

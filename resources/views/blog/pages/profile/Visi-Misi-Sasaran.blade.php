@@ -4,7 +4,7 @@
 @section('body')
 <!-- ======= Blog Section ======= -->
 <section id="blog" class="blog">
-    <div class="container-fluid" data-aos="fade-up">
+    <div class="container-fluid">
 
         <section class="section-page sc-about--menu my-7">
             <div class="container">

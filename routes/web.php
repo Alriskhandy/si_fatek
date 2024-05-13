@@ -132,6 +132,16 @@ Route::get('/judul-berita', function () {
     return view('blog.components.detail-berita');
 });
 
+// others page
+Route::get('/kontak', function () {
+    return view('blog.pages.kontak');
+});
+Route::get('/terms-conditions', function () {
+    return view('blog.pages.terms-conditions');
+});
+Route::get('/privacy', function () {
+    return view('blog.pages.privacy');
+});
 Route::fallback(function () {
     return view('blog.notfound');
 });
